@@ -19,9 +19,6 @@ const LineUpContainer = styled.div`
 const LineUpDiv = styled.div`
   display:flex;
   width: 100%;
-  
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	list-style: none;
 
@@ -52,16 +49,37 @@ const LineUpItem = styled.div`
   overflow: hidden;
 `;
 
+const LineUpText = styled.div`
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+  text-transform: uppercase;
+  font-family: 'Passion one', sans-serif;
+  padding: 1em;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  color: white;
+  background-color: #112023;
+  display: none;
+`;
+
 const LineUpImg = styled.img`
   width: 100%;
   height: 100%;
   transition: all 1s;
 
-  ${LineUpImg}:hover  {
-    cursor:pointer;
+  &:hover  {
     transform: scale(1.05);
   } 
+
+  &:hover + ${LineUpText} {
+    display:block;
+  } 
 `;
+
+
 
 const LineUp = () => {
   return (
@@ -71,31 +89,25 @@ const LineUp = () => {
         <LineUpDiv>
           <LineUpItem>
             <LineUpImg src={lineup}/>
+            <LineUpText>
+              Youman
+            </LineUpText>
           </LineUpItem>  
         </LineUpDiv>
         <LineUpDiv>
           <LineUpItem>
             <LineUpImg src={lineup}/>
+            <LineUpText>
+              Bafang
+            </LineUpText>
           </LineUpItem>  
         </LineUpDiv>
         <LineUpDiv>
           <LineUpItem>
             <LineUpImg src={lineup}/>
-          </LineUpItem>  
-        </LineUpDiv>
-        <LineUpDiv>
-          <LineUpItem>
-            <LineUpImg src={lineup}/>
-          </LineUpItem>  
-        </LineUpDiv>
-        <LineUpDiv>
-          <LineUpItem>
-            <LineUpImg src={lineup}/>
-          </LineUpItem>  
-        </LineUpDiv>
-        <LineUpDiv>
-          <LineUpItem>
-            <LineUpImg src={lineup}/>
+            <LineUpText>
+              Angle Mort et Clignotant
+            </LineUpText>
           </LineUpItem>  
         </LineUpDiv>
       </LineUpContainer>
