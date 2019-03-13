@@ -1,16 +1,40 @@
 import React from 'react';
+import styled from 'styled-components';
+import media from 'utils/media';
+
+// ROUTING
+import { BrowserRouter as Router } from 'react-router-dom'
 
 // THEME
 import { ThemeProvider } from 'styled-components';
 import theme from 'utils/theme';
 
 // COMPONENTS
-import LineUp from 'features/line-up/LineUp';
+import Layout from 'components/layout/Layout';
+
+const Container = styled.div`
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background: linear-gradient(to bottom, rgba(101,234,163,1) 0%, rgba(28,75,48,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65eaa3', endColorstr='#1c4b30', GradientType=0 );
+
+  ${media.laptop`
+    height: 100vh;
+    overflow-y: hidden;
+  `}
+`;
 
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <LineUp />
+      <Container>
+        <Router>
+          <Layout>
+          </Layout>
+        </Router>
+      </Container>
     </ThemeProvider>
   );
 }
