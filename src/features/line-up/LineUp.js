@@ -12,21 +12,18 @@ const LineUpContainer = styled.div`
   margin: auto;
 
   ${media.tablet`
-    max-width: 80%;
+    max-width: 70%;
   `}
 `;
 
-const LineUpTitle = styled.h2`
-  text-align: center;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.sectionTitleColor};
-  letter-spacing: 10px;
-`;
-
-const LineUpItem = styled.div`
-  position: relative;
+const LineUpDiv = styled.div`
+  display:flex;
   width: 100%;
-  min-height: 10em;
+  
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	list-style: none;
 
   ${media.tablet`
       width: 50%;
@@ -41,9 +38,29 @@ const LineUpItem = styled.div`
   `}
 `;
 
+const LineUpTitle = styled.h2`
+  text-align: center;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.sectionTitleColor};
+  letter-spacing: 10px;
+`;
+
+const LineUpItem = styled.div`
+  position: relative;
+  width: 100%;
+  min-height: 10em;
+  overflow: hidden;
+`;
+
 const LineUpImg = styled.img`
   width: 100%;
   height: 100%;
+  transition: all 1s;
+
+  ${LineUpImg}:hover  {
+    cursor:pointer;
+    transform: scale(1.05);
+  } 
 `;
 
 const LineUp = () => {
@@ -51,24 +68,38 @@ const LineUp = () => {
     <Fragment>
       <LineUpTitle>Line up</LineUpTitle>
       <LineUpContainer>
-        <LineUpItem>
-          <LineUpImg src={lineup}/>
-        </LineUpItem>
-        <LineUpItem>
-          <LineUpImg src={lineup}/>
-        </LineUpItem>
-        <LineUpItem>
-          <LineUpImg src={lineup}/>
-        </LineUpItem>
-        <LineUpItem>
-          <LineUpImg src={lineup}/>
-        </LineUpItem>
-        <LineUpItem>
-          <LineUpImg src={lineup}/>
-        </LineUpItem>
+        <LineUpDiv>
+          <LineUpItem>
+            <LineUpImg src={lineup}/>
+          </LineUpItem>  
+        </LineUpDiv>
+        <LineUpDiv>
+          <LineUpItem>
+            <LineUpImg src={lineup}/>
+          </LineUpItem>  
+        </LineUpDiv>
+        <LineUpDiv>
+          <LineUpItem>
+            <LineUpImg src={lineup}/>
+          </LineUpItem>  
+        </LineUpDiv>
+        <LineUpDiv>
+          <LineUpItem>
+            <LineUpImg src={lineup}/>
+          </LineUpItem>  
+        </LineUpDiv>
+        <LineUpDiv>
+          <LineUpItem>
+            <LineUpImg src={lineup}/>
+          </LineUpItem>  
+        </LineUpDiv>
+        <LineUpDiv>
+          <LineUpItem>
+            <LineUpImg src={lineup}/>
+          </LineUpItem>  
+        </LineUpDiv>
       </LineUpContainer>
     </Fragment>
-    
   )
 }
 
