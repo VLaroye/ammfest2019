@@ -14,7 +14,6 @@ import logo from 'assets/logo.png';
 const Container = styled.nav`
   width: 100%;
   box-sizing: border-box;
-
   display: flex;
   justify-content: space-between;
 `;
@@ -41,12 +40,16 @@ const Logo = styled.div`
     }
   }
 
-  
-
   img {
     width: 7em;
     height: 7em;
     margin: 1em 0 0 1em;
+    transition:transform .9s;
+
+    &:hover {
+      cursor: pointer;
+      transform:rotate(540deg); 
+    }
   }
 `;
 
