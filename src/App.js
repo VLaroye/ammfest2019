@@ -11,6 +11,7 @@ import theme from 'utils/theme';
 
 // COMPONENTS
 import Layout from 'components/layout/Layout';
+import LineUp from 'features/line-up/LineUp';
 
 const Container = styled.div`
   width: 100vw;
@@ -32,6 +33,7 @@ const App = () => {
       <Container>
         <Router>
           <Layout>
+            <LineUp />
           </Layout>
         </Router>
       </Container>
