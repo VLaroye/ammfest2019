@@ -11,6 +11,7 @@ import theme from 'utils/theme';
 
 // COMPONENTS
 import Layout from 'components/layout/Layout';
+import Infos from 'features/infos/Infos';
 
 const Container = styled.div`
   width: 100vw;
@@ -21,7 +22,7 @@ const Container = styled.div`
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65eaa3', endColorstr='#1c4b30', GradientType=0 );
 
   ${media.laptop`
-    height: 100vh;
+    
     overflow-y: hidden;
   `}
 `;
@@ -32,6 +33,7 @@ const App = () => {
       <Container>
         <Router>
           <Layout>
+            <Infos />
           </Layout>
         </Router>
       </Container>

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Big John';
+  src: url('./assets/fonts/BigJohn/BigJohn.woff2') format('woff2'),
+      url('./assets/fonts/BigJohn/BigJohn.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
