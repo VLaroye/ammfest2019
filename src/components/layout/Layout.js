@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from 'react';
 
 // COMPONENTS
-import TopBar from './TopBar';
 import SideBar from './SideBar';
 
 const Layout = ({ children }) => {
@@ -9,9 +8,11 @@ const Layout = ({ children }) => {
 
   return (
     <Fragment>
-      <TopBar toggleSideBar={() => toggleSideBar(!isSideBarOpen)}/>
       <SideBar isOpen={isSideBarOpen} toggleSideBar={() => toggleSideBar(!isSideBarOpen)}/>
-      { children }
+      <main id="page-wrap">
+        { children }
+      </main>
+      
     </Fragment>
   )
 };
