@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 import media from 'utils/media';
 
 // IMAGE
@@ -16,10 +17,12 @@ const LineUpContainer = styled.div`
 `;
 
 const LineUpTitle = styled.h2`
+  font-family: 'Big John';
+  font-size: 3em;
   text-align: center;
   text-transform: uppercase;
   color: ${({ theme }) => theme.sectionTitleColor};
-  letter-spacing: 10px;
+  margin: 3em 0;
 `;
 
 const LineUpElt = styled.figure`
@@ -154,8 +157,52 @@ const LineUpText = styled.figcaption`
 const LineUp = () => {
   return (
     <Fragment>
-      <LineUpTitle>Line up</LineUpTitle>
+      <ScrollAnimation animateIn='slideInLeft' animateOnce>
+        <LineUpTitle>Line up</LineUpTitle>
+      </ScrollAnimation>
       <LineUpContainer>
+        <LineUpElt>
+          <img src={lineup} alt="YouMan"/>
+          <LineUpText>
+            <h2>You<span>Man</span></h2>
+            <p>Electro/DarkDisco</p>
+          </LineUpText>			
+        </LineUpElt>
+        <LineUpElt>
+          <img src={lineup} alt="YouMan"/>
+          <LineUpText>
+            <h2>You<span>Man</span></h2>
+            <p>Electro/DarkDisco</p>
+          </LineUpText>			
+        </LineUpElt>
+        <LineUpElt>
+          <img src={lineup} alt="YouMan"/>
+          <LineUpText>
+            <h2>You<span>Man</span></h2>
+            <p>Electro/DarkDisco</p>
+          </LineUpText>			
+        </LineUpElt>
+        <LineUpElt>
+          <img src={lineup} alt="YouMan"/>
+          <LineUpText>
+            <h2>You<span>Man</span></h2>
+            <p>Electro/DarkDisco</p>
+          </LineUpText>			
+        </LineUpElt>
+        <LineUpElt>
+          <img src={lineup} alt="YouMan"/>
+          <LineUpText>
+            <h2>You<span>Man</span></h2>
+            <p>Electro/DarkDisco</p>
+          </LineUpText>			
+        </LineUpElt>
+        <LineUpElt>
+          <img src={lineup} alt="YouMan"/>
+          <LineUpText>
+            <h2>You<span>Man</span></h2>
+            <p>Electro/DarkDisco</p>
+          </LineUpText>			
+        </LineUpElt>
         <LineUpElt>
           <img src={lineup} alt="YouMan"/>
           <LineUpText>

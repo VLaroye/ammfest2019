@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 // MEDIA
 import media from 'utils/media';
@@ -54,16 +55,17 @@ const Logo = styled.div`
 `;
 
 const Nav = styled.div`
+  font-family: 'Big John';
   padding-right: 2em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: bold;
   margin-top: 1.5em;
-  color: white;
-  text-shadow: 3px 3px 20px gray;
+  text-shadow: 3px 3px 20px green;
 
   ul {
     display: none;
+    color: white;
   }
 
   ${media.laptop`
@@ -87,6 +89,7 @@ const HamburgerButton = styled(FontAwesomeIcon)`
 
 const BookingButton = styled.li`
   background-color: orange;
+  text-shadow: none;
 `;
 
 const TopBar = ({ toggleSideBar }) => {
@@ -101,10 +104,18 @@ const TopBar = ({ toggleSideBar }) => {
       </Logo>
       <Nav>
         <ul>
-          <li>Accueil</li>
-          <li>Line-up</li>
-          <li>Infos</li>
-          <li>Réseaux</li>
+          <ScrollAnimation offset={0} animateIn='bounceInDown' animateOnce>
+            <li>Accueil</li>
+          </ScrollAnimation>
+          <ScrollAnimation offset={0} delay={100} animateIn='bounceInDown' animateOnce>
+            <li>Line up</li>
+          </ScrollAnimation>
+          <ScrollAnimation offset={0} delay={200} animateIn='bounceInDown' animateOnce>
+            <li>Infos</li>
+          </ScrollAnimation>
+          <ScrollAnimation offset={0} delay={300} animateIn='bounceInDown' animateOnce>
+            <li>Reseaux</li>
+          </ScrollAnimation>
           <BookingButton>Tickets</BookingButton>
         </ul>
         <HamburgerButton onClick={toggleSideBar} className="hamburgerMenu" icon={faBars} size='2x' />
