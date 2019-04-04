@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import media from 'utils/media';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCampground, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faCampground, faUtensils, faGlobeAmericas, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookSquare, faSoundcloud, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 import "animate.css/animate.min.css";
 
 // ROUTING
-import { BrowserRouter as Router } from 'react-router-dom'
+import routes from 'utils/router';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
 // THEME
 import { ThemeProvider } from 'styled-components';
@@ -15,10 +17,8 @@ import theme from 'utils/theme';
 
 // COMPONENTS
 import Layout from 'components/layout/Layout';
-import LineUp from 'features/line-up/LineUp';
-import Infos from 'features/infos/Infos';
 
-library.add( faCampground, faUtensils )
+library.add( faCampground, faUtensils, faFacebookSquare, faSoundcloud, faYoutube, faGlobeAmericas, faChevronRight, faChevronLeft )
 
 const Container = styled.div`
   width: 100vw;
@@ -40,8 +40,9 @@ const App = () => {
       <Container>
         <Router>
           <Layout>
-            <LineUp />
-            <Infos />
+            <Switch>
+              {routes.map(({ exact, path, name, component }) => <Route exact path={path} name component={component} />)}
+            </Switch>
           </Layout>
         </Router>
       </Container>
