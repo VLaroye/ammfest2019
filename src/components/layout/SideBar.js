@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 
 // CONSTANTS
@@ -7,9 +7,7 @@ import NAV_ITEMS from 'constants.js';
 // ROUTING
 import { Link } from 'react-router-dom';
 
-
-
-const SideBar = ({ isOpen, toggleSideBar }) => {
+const SideBar = ({ isOpen }) => {
   const styles = {
     bmBurgerButton: {
       position: 'fixed',
@@ -19,10 +17,10 @@ const SideBar = ({ isOpen, toggleSideBar }) => {
       top: '36px'
     },
     bmBurgerBars: {
-      background: '#373a47'
+      background: 'white'
     },
     bmBurgerBarsHover: {
-      background: '#a90000'
+      background: 'white'
     },
     bmCrossButton: {
       height: '24px',

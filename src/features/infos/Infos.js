@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import ScrollAnimation from 'react-animate-on-scroll';
 import { AppBar, Tabs, Tab, Grid, Card } from '@material-ui/core'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import media from 'utils/media';
 
-
-const Title = styled.h1`
-  font-family: 'Big John';
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-  font-size: 3em;
-  margin: 3em 0;
-`;
+import SectionTitle from 'components/SectionTitle';
 
 const Container = styled.div`
   width: 80%;
@@ -102,16 +93,8 @@ class Infos extends Component {
   render () {
     return ( 
       <div>
-
-        <ScrollAnimation animateIn='slideInLeft' animateOnce>
-          <Title>
-              Informations
-          </Title>
-        </ScrollAnimation>
-
-
+        <SectionTitle text="Informations"/>
         <Grid container direction="row" justify="center" alignItems="center" >
-
           <Container>
             <AppBar position="static">
               <StyledTabs indicatorColor="secondary" value={ this.state.value } onChange={ this.handleChange }>
@@ -133,7 +116,7 @@ class Infos extends Component {
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d40321.747804775296!2d2.5335979!3d50.8291405!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dce89edcba7857%3A0x259e8d22100fd6aa!2sPetit+Chemin+d&#39;Hazebrouck%2C+59114+Steenvoorde!5e0!3m2!1sfr!2sfr!4v1553187400988"/>
                 <div className="text">
                   <p><span>LIEU</span> :<br></br> Terrain des Archers - Petit Chemin d'Hazebrouck <br></br> 59114, STEENVOORDE <br></br>Parking à 100m</p>
-                  <p><span>HORRAIRES</span> : <br></br>OUVERTURE DES PORTES : 14h00 <br></br> FERMETURE : 3h00</p>
+                  <p><span>HORAIRES</span> : <br></br>OUVERTURE DES PORTES : 14h00 <br></br> FERMETURE : 3h00</p>
                   <p><span>TARIF</span> : <br></br>
                       PREVENTE : 12€ + 1€ de frais de réservation <br></br>
                       SUR PLACE : 15€ 
