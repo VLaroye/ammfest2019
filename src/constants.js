@@ -17,13 +17,14 @@ export default {
       second : 'A l’instar d’autres duos, comme Daft Punk ou The Chemical Brothers, Tepat Huleux et Giac Di Falco sont inséparables depuis leur adolescence. Originaires de Calais, les deux jeunes hommes se rencontrent au lycée en 1996. Depuis, ils ne se sont plus quittés. Ils ont formé plusieurs groupes rock et électro, avant de continuer, seulement tous les deux depuis 2013, sous l’identité You Man. Pour ce nouveau projet, ils abandonnent guitare et basse pour se concentrer sur les machines. Toutes leurs années d’apprentissage ont permis aux deux musiciens de trouver la bonne formule et d’offrir un son unique, original, dansant, qu’ils baptisent « Club Wave », soit un savant mélange d’électro club, de mélodies new wave et d’un groove disco déviant, sombre et hypnotique.',
       third: ''
     },
-    liens: {
+    links: {
       site: 'http://www.you-man.eu/',
       soundcloud: 'https://soundcloud.com/you_man',
       facebook: 'https://www.facebook.com/youmanband',
     },
     lineUpImg: YouManLU,
-    artistImg: YouManArtist
+    artistImg: YouManArtist,
+    video: 'sLHeOABFAbA',
   },
   bafang: {
     id: 'bafang',
@@ -33,13 +34,14 @@ export default {
       first: 'Issue d\'un terroir sans précédents, comme si le Niger prenait sa source dans la Manche. BAFANG est une pirogue dans l\'espace.',
       second: 'Entre déserts inter-connectiques où se mélangent les acteurs dans un lien social évident, vous entrerez sans fermer la porte derrière vous. Aux confluents de vos limites. Musique tribale, celtique, éphémère, vouée à rester dans l\'intelligible ou à retourner dans l\'informatif. Vous en conviendez. Mais certes, comme tout le monde le sait certaines histoires ne se racontent pas...',
     },
-    liens: {
+    links: {
       youtube: 'https://www.youtube.com/channel/UCDte3hZUCOweKrrRDwntXxg',
       soundcloud: 'https://soundcloud.com/bafang?fbclid=IwAR2zrAjtJTopWI6u_8Zm9OPyjgAye0x9CY5-FKinANRPeDnw3mzkqQe6Yt4',
       facebook: 'https://www.facebook.com/BAFANGOFFICIEL/',
     },
     lineUpImg: BafangLU,
-    artistImg: BafangArtist
+    artistImg: BafangArtist,
+    video: '3cK2b6Z2VdI'
   },
   anglemortetclignotant: {
     id: 'anglemortetclignotant',
@@ -50,12 +52,12 @@ export default {
       second: 'Une performance zapping martelée d’hymnes féria/rugby à l’énergie punk où copulent l\'esthétique clubbing de campagne, des slogans ravageurs et quelques centimes d’euros.',
     },
     
-    liens: {
+    links: {
       youtube: 'https://www.youtube.com/watch?v=1Vba2TGa830',
       soundcloud: 'https://soundcloud.com/angle-mort-clignotant/des-frites-putain-et-de-la-sauce-bordel',
       facebook: 'https://www.facebook.com/anglemortetclignotant/',
     },
-    artistImg: AMC
-
+    artistImg: AMC,
+    video: '1Vba2TGa830',
   },
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
+import styled from 'styled-components';
 
 // CONSTANTS
 import NAV_ITEMS from 'constants.js';
@@ -7,6 +8,14 @@ import NAV_ITEMS from 'constants.js';
 // ROUTING
 import { Link } from 'react-router-dom';
 
+const MenuContainer = styled(Menu)`
+`;
+const Container = styled(Link)`
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  `;
 const SideBar = ({ isOpen }) => {
   const styles = {
     bmBurgerButton: {
@@ -27,35 +36,37 @@ const SideBar = ({ isOpen }) => {
       width: '24px'
     },
     bmCross: {
-      background: '#bdc3c7'
+      background: 'white'
     },
     bmMenuWrap: {
       position: 'fixed',
-      height: '100%'
+      height: '100%',
+      padding: '0'
     },
     bmMenu: {
-      background: '#373a47',
-      padding: '2.5em 1.5em 0',
-      fontSize: '1.15em'
+      background: 'linear-gradient(to bottom, rgba(242,43,66,1) 0%, rgba(254,113,13,1) 100%)',
+      padding: '2.5em 2em 0',
+      fontSize: '2em'
     },
     bmMorphShape: {
       fill: '#373a47'
     },
     bmItemList: {
       color: '#b8b7ad',
-      padding: '0.8em'
     },
     bmItem: {
       display: 'inline-block'
     },
     bmOverlay: {
-      background: 'rgba(0, 0, 0, 0.3)'
+      background: 'rgba(0, 0, 0, 0.5)'
     }
   }
   return (
-    <Menu pageWrapId={'page-wrap'} isOpen={isOpen} styles={styles}>
-      <a className="menu-item">Home</a>
-    </Menu>
+    <MenuContainer pageWrapId={'page-wrap'} isOpen={isOpen} styles={styles}>
+     <Container  to={`/`} >
+        <a className="menu-item">Home</a>
+     </Container>
+    </MenuContainer>
   )
 }
 
