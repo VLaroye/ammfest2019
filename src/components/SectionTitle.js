@@ -5,10 +5,11 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const Title = styled.h1`
   font-family: 'Big John';
   text-transform: uppercase;
+  letter-spacing: 3px;
   text-align: center;
   color: white;
   font-size: 3em;
-  margin: 1em 0;
+  margin-top: 2em ;
 `;
 
 const SectionTitle = ({ text }) => {

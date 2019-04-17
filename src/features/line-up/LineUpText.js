@@ -7,6 +7,10 @@ const LineUpText = styled.figcaption`
   text-transform: uppercase;
   font-size: 1.25em;
   backface-visibility: hidden;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+  
 
   ${media.tablet`
     p {
@@ -40,14 +44,12 @@ const LineUpText = styled.figcaption`
     word-spacing: -0.15em;
     font-weight: 300;
     transition: transform 0.35s;
-  }
-
-  span {
-    font-weight: 800;
+    text-shadow: 8px 5px 10px #63e6a0;
   }
 
   h2, p {
     margin:1em;
+    font-weight: 900;
   }
 
   p {
@@ -56,6 +58,7 @@ const LineUpText = styled.figcaption`
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: scale(1.5);
+    margin-top: 60%;
   }
 
   &::before, &::after {
@@ -81,6 +84,12 @@ const LineUpText = styled.figcaption`
 
     h2 {
       transform: scale(0.9);
+    }
+
+    p {
+      background-color: white;
+      color: black;
+
     }
 
     img {

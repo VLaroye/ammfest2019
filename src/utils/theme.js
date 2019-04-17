@@ -1,7 +1,11 @@
-export default {
-  primary: "#30774d",
-  secondary: "#db7093",
+import { createMuiTheme } from '@material-ui/core/styles';
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#eceff1',
+    },
+  },
+});
 
-  sectionTitleColor: 'white'
-}
+export default theme;

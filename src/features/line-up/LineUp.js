@@ -11,6 +11,7 @@ const LineUpContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  box-shadow: 5px 30px 100px #245d3d;
 
   ${media.tablet`
     max-width: 80%;
