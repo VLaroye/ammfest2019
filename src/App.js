@@ -24,7 +24,6 @@ const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-
   background: linear-gradient(to bottom, rgba(101,234,163,1) 0%, rgba(28,75,48,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#65eaa3', endColorstr='#1c4b30', GradientType=0 );
 

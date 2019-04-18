@@ -11,6 +11,7 @@ const Container = styled.div`
   color:white;
   padding: 4rem 0;
 
+
   .about {
     color: white;
   }
