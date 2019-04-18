@@ -1,17 +1,18 @@
 import React from 'react';
-import fond from 'assets/fond.png';
 import styled from 'styled-components';
 
-const Image = styled.img`
-  position:absolute;
-  top: 0;
-  z-index:0;
-  object-fit: contain;
-  width: 100%;
-`;
+const Container = styled.div`
+  font-size: 3em;
+  margin: 8em 3em;
+  z-index: 0;
+  color: white;
+  font-family: Roboto; 
+  text-transform: uppercase;
+  background-color: black;
+  `;
 const Header = () => {
   return (
-    <Image src={ fond } alt="fond"/>
+    <Container>billeterie ouverte ! </Container>
     )
 };
 

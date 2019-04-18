@@ -2,9 +2,6 @@ import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import styled from 'styled-components';
 
-// CONSTANTS
-import NAV_ITEMS from 'constants.js';
-
 // ROUTING
 import { Link } from 'react-router-dom';
 
@@ -64,7 +61,7 @@ const SideBar = ({ isOpen }) => {
   return (
     <MenuContainer pageWrapId={'page-wrap'} isOpen={isOpen} styles={styles}>
      <Container  to={`/`} >
-        <a className="menu-item">Home</a>
+        <a href="/" className="menu-item">Home</a>
      </Container>
     </MenuContainer>
   )
