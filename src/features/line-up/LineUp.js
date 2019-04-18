@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import media from 'utils/media';
 import SectionTitle from 'components/SectionTitle';
@@ -20,14 +20,14 @@ const LineUpContainer = styled.div`
 
 const LineUp = () => {
   return (
-    <Fragment>
+    <div>
       <SectionTitle text="Line-up"/>
       <LineUpContainer>
         {Object.values(artists).map(artist => (
           <LineUpElement artist={ artist } key={ artist.id } />
         ))}
       </LineUpContainer>
-    </Fragment>
+    </div>
   )
 }
 

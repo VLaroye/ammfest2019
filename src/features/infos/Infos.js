@@ -6,6 +6,10 @@ import media from 'utils/media';
 
 import SectionTitle from 'components/SectionTitle';
 
+const Info = styled.div`
+
+  `;
+
 const Container = styled.div`
   width: 80%;
   height: 500px;
@@ -116,7 +120,7 @@ class Infos extends Component {
 
   render () {
     return ( 
-      <div>
+      <Info>
         <SectionTitle text="Informations"/>
         <Grid container direction="row" justify="center" alignItems="center" >
           <Container>
@@ -155,10 +159,8 @@ class Infos extends Component {
               </StyledCard>
             }
           </Container>
-
         </Grid>  
-    
-      </div>
+      </Info>
      )
   }
 }

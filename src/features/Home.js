@@ -4,10 +4,12 @@ import React, { Fragment } from 'react';
 import LineUp from './line-up/LineUp';
 import Infos from './infos/Infos';
 import Footer from './footer/Footer';
+import Header from './header/Header';
 
 const Home = () => {
   return (
     <Fragment>
+      <Header />
       <LineUp />
       <Infos />
       <Footer />

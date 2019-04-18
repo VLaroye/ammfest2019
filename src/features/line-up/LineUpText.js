@@ -33,7 +33,6 @@ const LineUpText = styled.figcaption`
   }
 
   & > a {
-    z-index: 1000;
     text-indent: 200%;
     white-space: nowrap;
     font-size: 0;
