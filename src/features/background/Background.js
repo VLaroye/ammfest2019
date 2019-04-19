@@ -5,9 +5,9 @@ import styled from 'styled-components';
 const Image = styled.img`
   position:absolute;
   top: 0;
-  z-index:0;
   object-fit: contain;
   width: 100%;
+  z-index: 0;
 `;
 const Background = () => {
   return (

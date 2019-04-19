@@ -2,17 +2,34 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { AppBar, Tabs, Tab, Grid, Card } from '@material-ui/core'; 
 import media from 'utils/media';
-
 import SectionTitle from 'components/SectionTitle';
+import ScrollAnimation from 'react-animate-on-scroll';
+
+
+// ICONS 
+import tente from 'assets/icons/tente.png';
+import cine from 'assets/icons/cine.png';
+import frite from 'assets/icons/frite.png';
+import parking from 'assets/icons/parking.png';
+import biere from 'assets/icons/biere.png';
 
 const Info = styled.div`
 
   `;
 
 const Container = styled.div`
-  width: 80%;
-  height: 500px;
+  width: 97%;
+  height: 100%;
   margin-bottom:5em;
+
+  ${media.laptop`
+      width: 90%;
+  `}
+
+  ${media.desktop`
+    max-width: 80%;
+  `}
+
 `;
 
 const StyledTabs = styled(Tabs)`
@@ -28,7 +45,7 @@ const StyledTab = styled(Tab)`
  width:50%;
  background-color: #042b26!important;
  font-weight:700!important;
- font-size:1.5em!important;
+ font-size:1.2em!important;
  letter-spacing: 2px!important;
  color:white!important;
 `;
@@ -40,10 +57,11 @@ const StyledCard = styled(Card)`
 
   iframe {
     width: 100%;
-    height: 450px;
+    height: 300px;
 
   ${media.tablet`
       width: 50%;
+      height: 450px;
   `}
 
   }
@@ -55,7 +73,7 @@ const GridContainer = styled(Grid)`
   align-items:center;
   height: 100%;
   position:relative;
-
+  
   ${media.tablet`
       flex-direction:row;
   `}
@@ -70,25 +88,54 @@ const GridContainer = styled(Grid)`
 `;
 
 const InformationFriday= styled.div`
-  width: 50%;
-  `;
+  width: 100%;
+
+  ${media.tablet`
+    width: 50%;
+  `} 
+
+`;
 
 const InformationSaturday= styled.div`
-  display: flex;
-  width: 50%;
-  box-sizing: border-box;
-  height: 100%;
-  position:absolute;
-  left: 50%;
+  width: 100%;
+  display:flex;
+
+  ${media.tablet`
+    box-sizing: border-box;
+    height: 100%;
+    position:absolute;
+    left: 50%;
+    width: 50%;
+  `} 
 
   .text {
-    width: 85%;
-    margin:auto;
+    margin:auto 15%;
+    width: 90%;
+
+    ${media.tablet`
+      margin: auto;
+  `} 
+
   }
 
   p {
+    margin: 0;
+    font-size: 0.8em;
+
+    ${media.tablet`
     padding:0.5em;
-    margin: 0 0 0 25%;
+    margin: 0 0 0 10%;
+    font-size: 0.9em;
+  `} 
+
+    ${media.laptop`
+      padding:0.5em 15%;
+      margin: 0 0 0 10%;
+      font-size: 1em;
+    `} 
+
+
+  
   }
   
   #title{
@@ -102,9 +149,20 @@ const InformationSaturday= styled.div`
   }
 
   #icons {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
     background-color:#034228;
+    min-width: 20%
   }
+
+  .icon {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding: 0.4em;
+  }
+
 
 `;
 
@@ -142,7 +200,6 @@ class Infos extends Component {
               : 
               <StyledCard>
                 <GridContainer>
-                  <iframe title="carte Samedi" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10083.860534326544!2d2.556718469112891!3d50.81328467952719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dce62091f889a1%3A0x7ec7de275ff362a9!2sChemin+Petit+d&#39;Hazebrouck%2C+59114+Steenvoorde!5e0!3m2!1sfr!2sfr!4v1555489927534!5m2!1sfr!2sfr"/>
                   <InformationSaturday>
                     <div className="text">
                       <p><span id="title">LIEU</span><br></br> Terrain des Archers <br/>Chemin Petit d'Hazebrouck <br></br> 59114, STEENVOORDE <br></br>Parking à 100m</p>
@@ -151,9 +208,17 @@ class Infos extends Component {
                           Prévente : <span>13€</span><br/>
                           Sur place : <span>15€</span>
                       </p>
+                      <p><span id="title">CAMPING</span> <br></br>Uniquement pour la nuit <br/>du SAMEDI au DIMANCHE</p>
                     </div>
-                    <div id="icons"></div>
+                    <div id="icons">
+                      <img src={ biere } className="icon" alt="tente"/>
+                      <img src={ frite } className="icon" alt="tente"/>
+                      <img src={ cine } className="icon" alt="tente"/>
+                      <img src={ parking } className="icon" alt="tente"/>
+                      <img src={ tente } className="icon" alt="tente"/>
+                    </div>
                   </InformationSaturday>
+                  <iframe title="carte Samedi" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10083.860534326544!2d2.556718469112891!3d50.81328467952719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dce62091f889a1%3A0x7ec7de275ff362a9!2sChemin+Petit+d&#39;Hazebrouck%2C+59114+Steenvoorde!5e0!3m2!1sfr!2sfr!4v1555489927534!5m2!1sfr!2sfr"/>
                 </GridContainer> 
               </StyledCard>
             }

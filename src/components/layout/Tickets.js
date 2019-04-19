@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Container = styled.div`
   background: linear-gradient(to bottom, rgba(242,43,66,1) 0%, rgba(254,113,13,1) 100%);
   position:absolute;
+  z-index: 2;
   right: 0%;
   text-transform: uppercase;
   color:white;

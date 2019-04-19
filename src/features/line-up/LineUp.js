@@ -14,8 +14,13 @@ const LineUpContainer = styled.div`
   box-shadow: 5px 30px 100px #245d3d;
 
   ${media.tablet`
+    max-width: 90%;
+  `}
+
+  ${media.desktop`
     max-width: 80%;
   `}
+  
 `;
 
 const LineUp = () => {

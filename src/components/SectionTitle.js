@@ -8,7 +8,7 @@ const Title = styled.h1`
   letter-spacing: 3px;
   text-align: center;
   color: white;
-  font-size: 3em;
+  font-size: 2em;
   margin-top: 2em ;
 `;
 
