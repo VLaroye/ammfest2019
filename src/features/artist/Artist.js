@@ -37,6 +37,10 @@ const Container = styled.div`
   ${media.laptop`
     width: 80%;
   `}
+
+  ${media.xxl`
+    width: 70%;
+  `}
 `;
 
 const ArtistImg = styled.img`
@@ -99,6 +103,11 @@ const TextContainer = styled.div`
       ". name . ."
       ". style social ."
       ". description description ."; 
+  `}
+
+  ${media.xxl`
+    margin: 4em auto;
+    grid-template-columns: 15% 50% 20% 15%;
   `}
 `;
 
@@ -215,13 +224,13 @@ const Artist = ({ match }) => {
               <FontAwesomeIcon icon={['fa', 'globe-americas']} />
             </a> : null}
             {artist.links.soundcloud ? <a href={ artist.links.soundcloud } className="link">
-              <FontAwesomeIcon icon={['fab', 'soundcloud']} />
+              <FontAwesomeIcon icon={['fab', 'soundcloud']} color="#FE5000"/>
             </a> : null}
             {artist.links.facebook ? <a href={ artist.links.facebook } className="link">
-              <FontAwesomeIcon icon={['fab', 'facebook-square']} />
+              <FontAwesomeIcon icon={['fab', 'facebook-square']} color="#3C5A99"/>
             </a> : null}
             {artist.links.youtube ? <a href={ artist.links.youtube } className="link">
-              <FontAwesomeIcon icon={['fab', 'youtube']} />
+              <FontAwesomeIcon icon={['fab', 'youtube']} color="#FF0000"/>
             </a> : null}
           </SocialIcons>
           <DescriptionContainer>

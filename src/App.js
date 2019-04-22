@@ -17,6 +17,7 @@ import theme from 'utils/theme';
 
 // COMPONENTS
 import Layout from 'components/layout/Layout';
+import ScrollToTop from 'components/ScrollToTop';
 
 library.add( faCampground, faUtensils, faFacebookSquare, faCircle, faSoundcloud, faYoutube, faTwitter, faInstagram, faGlobeAmericas, faHeart, faChevronRight, faChevronLeft )
 
@@ -38,11 +39,13 @@ const App = () => {
     <MuiThemeProvider theme={theme}>
       <Container>
         <Router>
-          <Layout>
-            <Switch>
-              {routes.map(({ exact, path, name, component }) => <Route exact path={path} name component={component} key={name} />)}
-            </Switch>
-          </Layout>
+          <ScrollToTop>
+            <Layout>
+              <Switch>
+                {routes.map(({ exact, path, name, component }) => <Route exact path={path} name component={component} key={name}/>)}
+              </Switch>
+            </Layout>
+          </ScrollToTop>
         </Router>
       </Container>
     </MuiThemeProvider>

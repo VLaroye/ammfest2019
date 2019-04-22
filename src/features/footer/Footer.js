@@ -30,12 +30,12 @@ const Container = styled.div`
   
   .sponso {
     grid-area: sponso;
-    margin: auto;
-    text-align: center;
+    margin: 0;
     font-size: 1.4em;
 
     ${media.tablet`
       font-size: 1.4em;
+      text-align: center;
     `}
 
     ${media.tablet`
@@ -86,6 +86,10 @@ const Container = styled.div`
 
       ${media.xl`
         width: 17%;
+      `}
+
+      ${media.xxl`
+        width: 12%;
       `}
     }
   }
