@@ -46,6 +46,7 @@ const ArtistImg = styled.img`
 `;
 
 const TextContainer = styled.div`
+  position: relative;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto auto;
@@ -71,21 +72,34 @@ const TextContainer = styled.div`
       width: 30%;
       margin: 3rem auto;
     `}
+
+    ${media.xl`
+      margin: 0;
+      position: absolute;
+      left: 2.5%;
+      display: block;
+      width: 95%;
+      height: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .iconLeft {
+      }
+    `}
   }
 
   ${media.xl`
-    grid-template-columns: 70% 30%;
+    margin: 4em auto;
+    grid-template-columns: 10% 55% 25% 10%;
     grid-template-rows: auto auto auto;
 
     grid-template-areas:
-      "name ."
-      "style social"
-      "description description"; 
+      ". name . ."
+      ". style social ."
+      ". description description ."; 
   `}
-`;
-
-const Header = styled.div`
- 
 `;
 
 const ArtistName = styled.div`
@@ -100,6 +114,10 @@ const ArtistName = styled.div`
   color: #BC9142;
   
   grid-area: name;
+
+  ${media.xl`
+    padding: 0;
+  `}
 `;
 
 const ArtistStyle = styled.div `
@@ -113,6 +131,16 @@ const ArtistStyle = styled.div `
   letter-spacing: 2px;
 
   grid-area: style;
+
+  ${media.xl`
+    height: 1.5em;
+    transform: translateY(-50%);
+    position: relative;
+    top: 50%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5em 0 0.3em 0;
+  `}
 `;
 
 const SocialIcons = styled.div`
@@ -129,6 +157,11 @@ const SocialIcons = styled.div`
   ${media.tablet`
     margin: 3rem 0;
     font-size: 4em;
+  `}
+
+  ${media.xl`
+    margin: 0;
+    font-size: 2.5em;
   `}
 `;
 
@@ -155,6 +188,11 @@ const DescriptionContainer = styled.div `
   ${media.tablet`
     font-size: 1.2em;
   `}
+
+  ${media.xl`
+    width: 100%;
+    margin: 1em auto 0 auto;
+  `}
 `;
 
 const Artist = ({ match }) => {
@@ -170,26 +208,22 @@ const Artist = ({ match }) => {
       <Container>
         <ArtistImg src={ artist.artistImg } alt={ artist.name }/>
         <TextContainer>
-          <Header> 
-            <div> 
-              <ArtistName>{ artist.name }</ArtistName>
-              <ArtistStyle>{ artist.style }</ArtistStyle>  
-            </div>        
-            <SocialIcons>
-              {artist.links.site ? <a href={ artist.links.site } className="link">
-                <FontAwesomeIcon icon={['fa', 'globe-americas']} />
-              </a> : null}
-              {artist.links.soundcloud ? <a href={ artist.links.soundcloud } className="link">
-                <FontAwesomeIcon icon={['fab', 'soundcloud']} />
-              </a> : null}
-              {artist.links.facebook ? <a href={ artist.links.facebook } className="link">
-                <FontAwesomeIcon icon={['fab', 'facebook-square']} />
-              </a> : null}
-              {artist.links.youtube ? <a href={ artist.links.youtube } className="link">
-                <FontAwesomeIcon icon={['fab', 'youtube']} />
-              </a> : null}
-            </SocialIcons>
-          </Header>
+          <ArtistName>{ artist.name }</ArtistName>
+          <ArtistStyle>{ artist.style }</ArtistStyle>        
+          <SocialIcons>
+            {artist.links.site ? <a href={ artist.links.site } className="link">
+              <FontAwesomeIcon icon={['fa', 'globe-americas']} />
+            </a> : null}
+            {artist.links.soundcloud ? <a href={ artist.links.soundcloud } className="link">
+              <FontAwesomeIcon icon={['fab', 'soundcloud']} />
+            </a> : null}
+            {artist.links.facebook ? <a href={ artist.links.facebook } className="link">
+              <FontAwesomeIcon icon={['fab', 'facebook-square']} />
+            </a> : null}
+            {artist.links.youtube ? <a href={ artist.links.youtube } className="link">
+              <FontAwesomeIcon icon={['fab', 'youtube']} />
+            </a> : null}
+          </SocialIcons>
           <DescriptionContainer>
             <p className="descriptionFirst">{ artist.description.first }</p>
             <p className="descriptionSecond">{ artist.description.second }</p>      
