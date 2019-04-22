@@ -11,40 +11,15 @@ import Footer from 'features/footer/Footer';
 import ARTISTS from 'constants.js';
 
 const Container = styled.div`
+  margin: 8em auto 0 auto;
   background-color: white;
   box-shadow: 5px 30px 100px #245d3d;
-  margin: 8em auto;
-  
-  ${media.tablet`
-      width: 80%;
-  `}
-
   width: 100%;
 
-  .iconLeft, .iconRight {
-    position: absolute;
-    top: 50%;
-    font-size: 2em;
+  a, a:visited {
+    color: inherit;
   }
 
-  .iconLeft {
-    left: -2%;
-  }
-
-  .iconRight {
-    z-index: 2;
-    right: -2 % ;
-  }
-
-  .circleRight {
-    color: white;
-    font-size: 1em;
-  }
-
-  .link {
-    padding: 0 0.5em;
-  }
-  
   .videoContainer {
     position: relative;
     padding-bottom: 56.25% /* 16:9 */;
@@ -58,6 +33,10 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
   }
+
+  ${media.laptop`
+    width: 80%;
+  `}
 `;
 
 const ArtistImg = styled.img`
@@ -67,49 +46,115 @@ const ArtistImg = styled.img`
 `;
 
 const TextContainer = styled.div`
-  position: relative;
-  padding: 5em;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto auto;
+
+  grid-template-areas:
+    "name"
+    "style"
+    "social"
+    "description"
+    "arrows"; 
+
+  .arrows {
+    grid-area: arrows;
+
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 1em auto;
+    font-size: 2.5em;
+
+    ${media.tablet`
+      width: 30%;
+      margin: 3rem auto;
+    `}
+  }
+
+  ${media.xl`
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto auto;
+
+    grid-template-areas:
+      "name ."
+      "style social"
+      "description description"; 
+  `}
 `;
 
 const Header = styled.div`
-  display:flex;
-  justify-content:space-around;
-  align-items: center;
+ 
 `;
 
 const ArtistName = styled.div`
-  text-transform:uppercase;
-  letter-spacing: 5px;
-  font-size:2em;
+  width: 90%;
+  margin: auto;
+  padding: 0.5em 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2em;
   font-weight: 900;
   color: #BC9142;
+  
+  grid-area: name;
 `;
 
 const ArtistStyle = styled.div `
+  padding: 0.2em 0;
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 900;
   color: white;
   background-color: black;
   text-align: center;
-  margin-top: 0.2em;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+
+  grid-area: style;
 `;
 
-const SocialIcons = styled.div `
-  font-size: 2em;
+const SocialIcons = styled.div`
+  margin: 1em 0;
+  font-size: 3em;
+  text-align: center;
+
+  grid-area: social;
+
+  .link {
+    padding: 0 0.2em;
+  }
+
+  ${media.tablet`
+    margin: 3rem 0;
+    font-size: 4em;
+  `}
 `;
 
 const DescriptionContainer = styled.div `
-  padding-top: 2em;
-  width: 70%;
-  margin: auto;
+  width: 80%;
   text-align: justify;
+  margin: auto;
 
-  .description {
+  p {
+    margin: 0;
+  }
+
+  .descriptionFirst, .descriptionSecond {
     letter-spacing: 1px;
     font-size: 0.9em;
   }
+
+  .descriptionSecond {
+    margin-top: 1em;
+  }
+
+  grid-area: description;
+
+  ${media.tablet`
+    font-size: 1.2em;
+  `}
 `;
 
 const Artist = ({ match }) => {
@@ -146,15 +191,17 @@ const Artist = ({ match }) => {
             </SocialIcons>
           </Header>
           <DescriptionContainer>
-            <p className="description">{ artist.description.first }</p>
-            <p className="description">{ artist.description.second }</p>      
+            <p className="descriptionFirst">{ artist.description.first }</p>
+            <p className="descriptionSecond">{ artist.description.second }</p>      
           </DescriptionContainer>
-          <Link to={`/artiste/${prevLink}`}>
-            <FontAwesomeIcon className="iconLeft" icon={['fa', 'chevron-left']} />
-          </Link>
-          <Link to={`/artiste/${nextLink}`}>
-            <FontAwesomeIcon className="iconRight" icon={['fa', 'chevron-right']} />
-          </Link>
+          <div className="arrows">
+            <Link to={`/artiste/${prevLink}`}>
+              <FontAwesomeIcon className="iconLeft" icon={['fa', 'chevron-left']} />
+            </Link>
+            <Link to={`/artiste/${nextLink}`}>
+              <FontAwesomeIcon className="iconRight" icon={['fa', 'chevron-right']} />
+            </Link>
+          </div>
         </TextContainer>
         <YouTube 
           videoId={artist.video}
