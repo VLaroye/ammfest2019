@@ -25,7 +25,7 @@ const LineUpContainer = styled.div`
 
 const LineUp = () => {
   return (
-    <div>
+    <div id="lineUp">
       <SectionTitle text="Line-up"/>
       <LineUpContainer>
         {Object.values(artists).map(artist => (

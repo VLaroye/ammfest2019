@@ -11,7 +11,7 @@ import Footer from 'features/footer/Footer';
 import ARTISTS from 'constants.js';
 
 const Container = styled.div`
-  margin: 8em auto 0 auto;
+  margin: 8em auto;
   background-color: white;
   box-shadow: 5px 30px 100px #245d3d;
   width: 100%;
@@ -88,14 +88,15 @@ const TextContainer = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      .iconLeft {
-      }
     `}
   }
 
+  ${media.desktop`
+    margin: 3em auto 1em auto;
+  `}
+
   ${media.xl`
-    margin: 4em auto;
+    margin: 8em auto;
     grid-template-columns: 10% 55% 25% 10%;
     grid-template-rows: auto auto auto;
 
@@ -106,7 +107,7 @@ const TextContainer = styled.div`
   `}
 
   ${media.xxl`
-    margin: 4em auto;
+    margin: 8em auto;
     grid-template-columns: 15% 50% 20% 15%;
   `}
 `;

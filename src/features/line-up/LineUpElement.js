@@ -21,7 +21,7 @@ const LineUpElt = styled.figure`
   `}
 
   ${media.laptop`
-      width: 33%;
+      width: calc(1/3)%;
   `}
 
   ${media.xl`

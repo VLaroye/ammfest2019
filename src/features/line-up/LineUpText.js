@@ -15,12 +15,43 @@ const LineUpText = styled.figcaption`
   ${media.tablet`
     p {
       font-size: 65%;
+      margin-top: 30%;
+    }
+
+    h2 {
+      font-size: 0.8em;
     }
   `}
 
   ${media.laptop`
+    h2 {
+      font-size: 1em;
+    }
+  `}
+
+  ${media.desktop`
+    h2 {
+      font-size: 1.4em;
+    }
+  `}
+
+  ${media.xl`
     p {
-      font-size: 65%;
+      margin-top: 50%;
+    }
+
+    h2 {
+      font-size: 1em;
+    }
+  `}
+
+  ${media.xxl`
+    p {
+      margin-top: 60%!important;
+    }
+
+    h2 {
+      font-size: 1.2em;
     }
   `}
 
@@ -43,11 +74,10 @@ const LineUpText = styled.figcaption`
     word-spacing: -0.15em;
     font-weight: 300;
     transition: transform 0.35s;
-    text-shadow: 8px 5px 10px #63e6a0;
+    text-shadow: 0 0 4px grey;
   }
 
   h2, p {
-    margin:1em;
     font-weight: 900;
   }
 
@@ -57,7 +87,7 @@ const LineUpText = styled.figcaption`
     opacity: 0;
     transition: opacity 0.35s, transform 0.35s;
     transform: scale(1.5);
-    margin-top: 60%;
+    margin-top: 40%;
   }
 
   &::before, &::after {
@@ -88,7 +118,6 @@ const LineUpText = styled.figcaption`
     p {
       background-color: white;
       color: black;
-
     }
 
     img {

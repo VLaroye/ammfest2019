@@ -33,7 +33,6 @@ const Container = styled.div`
 const StyledTabs = styled(Tabs)`
   width:100%;
   background-color:#042b26;
-  padding-top:1em;
   box-sizing: border-box;
   box-shadow: 5px 5px 40px #042b26;
 `;

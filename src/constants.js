@@ -1,11 +1,16 @@
 // IMAGE LINE-UP
 import YouManLU from 'assets/line-up/YouMan.jpg';
 import BafangLU from 'assets/line-up/Bafang.jpg';
+import AMCLU from 'assets/line-up/AMC.jpg';
+import BlackwaveLU from 'assets/line-up/Blackwave.jpg';
+import CelliniLU from 'assets/line-up/Cellini.jpg';
 
 // IMAGE ARTIST 
 import YouManArtist from 'assets/artist/YouMan.png';
 import BafangArtist from 'assets/artist/Bafang.png';
 import AMC from 'assets/artist/AMC.jpg';
+import Blackwave from 'assets/artist/Blackwave.png';
+import Cellini from 'assets/artist/Cellini.png';
 
 export default {
   youman: {
@@ -24,7 +29,7 @@ export default {
     },
     lineUpImg: YouManLU,
     artistImg: YouManArtist,
-    video: 'sLHeOABFAbA',
+    video: 'PD3RCwNseqQ',
   },
   bafang: {
     id: 'bafang',
@@ -57,7 +62,45 @@ export default {
       soundcloud: 'https://soundcloud.com/angle-mort-clignotant/des-frites-putain-et-de-la-sauce-bordel',
       facebook: 'https://www.facebook.com/anglemortetclignotant/',
     },
+    lineUpImg: AMCLU, 
     artistImg: AMC,
     video: '1Vba2TGa830',
   },
-}
+
+  blackwave: {
+    id: 'blackwave',
+    name: 'blackwave.',
+    style: 'Hip-Hop / Jazzy',
+    description: {
+      first: 'Blackwave (Willem Ardui et Jaywalker) forment un duo hip-pop anversois. Les messieurs de Blackwave apportent leurs merveilleux grooves des années 90 avec un groupe de musiciens de jazz du Conservatoire d\'Anvers. Leur premier EP \'Mic Check\' est sorti en mai 2017 et a été très bien reçu par la presse néerlandaise et belge.',
+      second: 'Leur single \'Elusive feat\' a maintenant plus de 3,5 millions de flux sur spotify. Leur précédent single "Whasgood ?!" a été loué par Billboard et est un single estival accrocheur, avec des influences de Prince, Outkast et Will Smith. Enfin, «Good Enough» est leur single le plus abouti à ce jour. Avec son ambiance hip-hop old school des années 90, ce titre montre son incroyable talent musical et vocal.',
+    },
+    links: {
+      site: 'https://www.blackwavedot.com/?fbclid=IwAR1v7OOs_tGTsxSHsINgw3IC96QiJnoeByvp4hFwd4HaD-NF3kpPpffn3b0',
+      soundcloud: 'https://soundcloud.com/blackwavedot',
+      facebook: 'https://www.facebook.com/blackwavedot/?__tn__=K-R&eid=ARDFJMrzQIh2OFDT8StBuXwDjiKhmZZsnNwN20FAuv2WHNHLm0lQSIC0OU6FIOBw67aRWxn-PNwyBZkL&fref=mentions&__xts__[0]=68.ARAMu_p911uXzAlTdHkGWn7r4Mv_tsTWdn8gfMouZ-RTeFScuWckZDinyN-FwxHtZMjL3ZUUdMM_3uljnSzSoNmm27jAzSqLwXMBbmkZDWirbwElS_tjWlWeRWyTNZelib9DLnpbJ2xIO_yY_8Rug963BPNbNh8FMJrYlHOsasBLNsNoD5DsZr818Guyn4UOrOhZIPt8d0HgDXtdLy09xONPVUOD07v71YeBeDF9Qr6m8Dp_K11H7hlsXSzXzxeAbLICUbd3LTqbw6CvRwhxW2sThJBUeyKFdFrm1feg908uPPM7xLdRjMfigl53cYdMUql0saZITcJthTzCNBTOMVo',
+    },
+    lineUpImg: BlackwaveLU,
+    artistImg: Blackwave,
+    video: 'Z4jt9d5ammI',
+  },
+
+  cellini: {
+    id: 'cellini',
+    name: 'Cellini',
+    style: 'Deep / Emotional',
+    description: {
+      first: 'Cellini est un artiste belge aux profondes racines italiennes. Il manie un très large éventail de sons puissants, tantôt profond et émotionnel, tantôt puissant et extatique. Du haut de ses 20 ans, il est encore très jeune mais a pourtant une vision forte de la musique et du son.',
+      second: 'En 2017, Cellini a commencé sa collaboration avec Floorfiller. Seulement quelques mois plus tard, il a ajouté la célèbre boîte de nuit Fuse à sa liste. Avec Fuse, il a fondé un nouveau concept appelé "Cycle Quatre" sur lesquels ils inviteront quelques artistes par an. En lisant l’esprit et l’âme de son public, Cellini vous emmène dans un voyage à travers les parties les plus profondes de la techno et traduit une profondeur infinie en sons audibles. Les lignes entre physique et mental, tangible et surnaturel, l’être humain et la musique s’estompent alors qu’il est sur scène.',
+    },
+    links: {
+      soundcloud: 'https://soundcloud.com/cellinimusic/',
+      facebook: 'https://www.facebook.com/Cellinimusic/',
+    },
+    lineUpImg: CelliniLU,
+    artistImg: Cellini,
+    video: 'zqVfseH1dbA',
+  },
+ 
+};
+
