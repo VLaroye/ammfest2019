@@ -33,6 +33,7 @@ const Container = styled.div`
     grid-area: sponso;
     margin: 0;
     font-size: 1.4em;
+    font-family: 'Big John';
 
     ${media.tablet`
       font-size: 1.4em;

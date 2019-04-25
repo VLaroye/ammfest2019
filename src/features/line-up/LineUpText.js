@@ -5,10 +5,10 @@ const LineUpText = styled.figcaption`
   padding: 1.5em;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.25em;
+  font-size: 1.35em;
   backface-visibility: hidden;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 2px;
+  font-family: 'Roboto condensed', sans-serif;
+  letter-spacing: 1px;
   font-weight: 900;
   
 
@@ -71,6 +71,7 @@ const LineUpText = styled.figcaption`
   }
 
   h2 {
+    font-family: 'Roboto condensed';
     word-spacing: -0.15em;
     font-weight: 300;
     transition: transform 0.35s;

@@ -53,7 +53,8 @@ const SideBar = ({ isOpen }) => {
       width: '100%',
       paddingBottom: '1em',
       color: 'inherit',
-      textDecoration: 'none'
+      textDecoration: 'none',
+      fontFamily: 'Roboto condensed',
     },
     bmOverlay: {
       background: 'rgba(0, 0, 0, 0.5)'

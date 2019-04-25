@@ -7,6 +7,7 @@ const Text = styled.div`
   color: white;
   position: relative;
   margin: 10em 2rem 2rem 2rem;
+  font-family: 'Roboto Condensed';
 
   ${media.tablet`
     margin-left: 4em;  
@@ -25,11 +26,12 @@ const Text = styled.div`
     text-align: end;
     box-sizing: border-box;
     margin: 0.5em;
-    font-size: 1.2em;
+    font-size: 1em;
     max-width: 20rem;
 
     ${media.desktop`
     max-width: 30rem;
+    font-size: 2em;
     `}
     
     ${media.xxl`
@@ -40,22 +42,23 @@ const Text = styled.div`
 
 
 const Actuality = styled.div`
-
+  font-family: 'Roboto Condensed';
   text-transform: uppercase;
   background-color: #00210b;
   position: relative;
   text-align: left;
-  padding: 0.5em;
+  padding: 0.3em 0.5em;
   border-radius: 10px;
   font-weight: bold;
   max-width: 20rem;
+  font-size: 1.3em;
 
   ${media.tablet`
     font-size: 1.5em;
   `}
 
   ${media.desktop`
-    font-size: 2em;  
+    font-size: 2.8em;  
     max-width: 30rem;
   `}
 
@@ -65,7 +68,7 @@ const Actuality = styled.div`
 
   .heart {
     padding-right: 0.5em;
-    color: #dec1b7;
+    color: #64e7a1;
   }
 `;
 
@@ -84,7 +87,7 @@ const Container = styled.div`
     color: white;
     position: relative;
     margin: 8em 2rem 2rem 2rem;
-    font-size: 1.5em;
+    font-size: 2.2em;
 
     ${media.tablet`
     margin-left: 4em;
@@ -102,7 +105,7 @@ const Container = styled.div`
   }
 
   .icon {
-    padding-bottom: 0.5em;
+    padding-bottom: 0.3em;
   }
 `;
 
@@ -114,9 +117,9 @@ const Header = () => {
         <p>#AMMFEST</p>
         <Actuality>
           <FontAwesomeIcon className="heart" icon={['fa', 'heart']} />
-          billeterie online ! 
+          billetterie online ! 
         </Actuality>
-        <p>19-20 JUILLET 2019</p>
+        <p>19 - 20 JUILLET 2019</p>
       </Text>
       <Social>
         <div className="logo">

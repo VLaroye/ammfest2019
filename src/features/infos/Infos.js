@@ -93,9 +93,12 @@ const InformationFriday= styled.div`
 
 `;
 
-const InformationSaturday= styled.div`
+const InformationSaturday = styled.div`
   width: 100%;
   display:flex;
+  color: white;
+  background-color: #034228;
+  font-family: 'Roboto condensed';
 
   ${media.tablet`
     box-sizing: border-box;
@@ -111,8 +114,7 @@ const InformationSaturday= styled.div`
 
     ${media.tablet`
       margin: auto;
-  `} 
-
+    `} 
   }
 
   p {
@@ -120,19 +122,16 @@ const InformationSaturday= styled.div`
     font-size: 0.8em;
 
     ${media.tablet`
-    padding:0.5em;
-    margin: 0 0 0 10%;
-    font-size: 0.9em;
-  `} 
+      padding: 0.5em;
+      margin: 0 0 0 10%;
+      font-size: 0.9em;
+    `} 
 
     ${media.laptop`
       padding:0.5em 15%;
       margin: 0 0 0 10%;
       font-size: 1em;
     `} 
-
-
-  
   }
   
   #title{
@@ -149,8 +148,12 @@ const InformationSaturday= styled.div`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    background-color:#034228;
-    min-width: 20%
+    background-color:#64e7a1;
+    min-width: 20%;
+
+    ${media.desktop`
+      min-width: 40%;
+    `} 
   }
 
   .icon {
@@ -159,8 +162,6 @@ const InformationSaturday= styled.div`
     height: 50px;
     padding: 0.4em;
   }
-
-
 `;
 
 class Infos extends Component {
@@ -200,12 +201,12 @@ class Infos extends Component {
                   <InformationSaturday>
                     <div className="text">
                       <p><span id="title">LIEU</span><br></br> Terrain des Archers <br/>Chemin Petit d'Hazebrouck <br></br> 59114, STEENVOORDE <br></br>Parking à 100m</p>
-                      <p><span id="title">HORAIRES</span><br></br>Ouverture: <span>14h00</span> <br></br> Fermeture: <span>3h00</span></p>
+                      <p><span id="title">HORAIRES</span><br></br>Ouverture : <span>14h00</span> <br></br> Fermeture : <span>3h00</span></p>
                       <p><span id="title">TARIF</span><br/>
                           Prévente : <span>13€</span><br/>
                           Sur place : <span>15€</span>
                       </p>
-                      <p><span id="title">CAMPING</span> <br></br>Uniquement pour la nuit <br/>du SAMEDI au DIMANCHE</p>
+                      <p><span id="title">CAMPING</span> <br></br>Uniquement pour la nuit du SAMEDI au DIMANCHE</p>
                     </div>
                     <div id="icons">
                       <img src={ biere } className="icon" alt="tente"/>

@@ -156,7 +156,7 @@ const ArtistStyle = styled.div `
 const SocialIcons = styled.div`
   margin: 1em 0;
   font-size: 3em;
-  text-align: center;
+  text-align: right;
 
   grid-area: social;
 
@@ -185,7 +185,8 @@ const DescriptionContainer = styled.div `
   }
 
   .descriptionFirst, .descriptionSecond {
-    letter-spacing: 1px;
+    font-family: 'Roboto';
+    letter-spacing: .58px;
     font-size: 0.9em;
   }
 
@@ -201,7 +202,11 @@ const DescriptionContainer = styled.div `
 
   ${media.xl`
     width: 100%;
-    margin: 1em auto 0 auto;
+    margin: 1.8em auto 0 auto;
+
+    .descriptionFirst, .descriptionSecond {
+      font-size: 0.8em;
+    }
   `}
 `;
 

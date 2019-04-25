@@ -54,7 +54,7 @@ export default {
   anglemortetclignotant: {
     id: 'anglemortetclignotant',
     name: 'Angle Mort & Clignotant',
-    style: 'TechnoBoom Stroboscopique | Samedi 20 Juillet',
+    style: 'TechnoBoom | Samedi 20 Juillet',
     description: {
       first: 'Angle Mort & Clignotant sont deux chauffards de Trap Music, qui la recrachent version Technoboom et stroboscopique.',
       second: 'Une performance zapping martelée d’hymnes féria/rugby à l’énergie punk où copulent l\'esthétique clubbing de campagne, des slogans ravageurs et quelques centimes d’euros.',
