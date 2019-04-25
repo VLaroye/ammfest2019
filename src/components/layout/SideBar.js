@@ -65,7 +65,7 @@ const SideBar = ({ isOpen }) => {
       <Link href="/#lineUp" className="menu-item">Line-up</Link>
       <Link href="/#info" className="menu-item">Informations</Link>
       <Link href="/" className="menu-item">Réservation</Link>
-      <Link href="/" className="menu-item">Sponsos</Link>
+      <Link href="/sponso" className="menu-item">Sponsos</Link>
     </Menu>
   )
 }

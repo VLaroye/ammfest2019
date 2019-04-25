@@ -2,6 +2,7 @@
 import Artist from 'features/artist/Artist';
 import Home from 'features/Home';
 import About from 'features/about/About';
+import Sponso from 'features/sponso/Sponso';
 
 const routes = [
   {
@@ -17,7 +18,11 @@ const routes = [
   {
     path: '/about',
     component: About,
-  }
+  },
+  {
+    path: '/sponso',
+    component: Sponso,
+  }, 
 ];
 
 export default routes;

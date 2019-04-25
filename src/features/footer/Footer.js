@@ -26,6 +26,7 @@ const Container = styled.div`
 
   a {
     color: inherit;
+    text-decoration: none;
   }    
   
   .sponso {
@@ -100,8 +101,10 @@ const Footer = () => {
   <Container>   
 
     <h1 className="sponso">
-      <FontAwesomeIcon className="heart" icon={['fa', 'heart']} />
-      {" "}NOS SPONSOS
+      <Link to={`/sponso`}>
+        <FontAwesomeIcon className="heart" icon={['fa', 'heart']} />
+        {" "}NOS SPONSOS
+      </Link>
     </h1>
     <div className="legal">
       <Link  to={`/about`} className="about" >

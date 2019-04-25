@@ -174,7 +174,7 @@ class Infos extends Component {
 
   render () {
     return ( 
-      <Info>
+      <Info id="info">
         <SectionTitle text="Informations"/>
         <Grid container direction="row" justify="center" alignItems="center" >
           <Container>
