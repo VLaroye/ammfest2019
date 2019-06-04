@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { AppBar, Tabs, Tab, Grid, Card } from '@material-ui/core'; 
 import media from 'utils/media';
 import SectionTitle from 'components/SectionTitle';
+import Tooltip from '@material-ui/core/Tooltip';
 
 // ICONS 
 import tente from 'assets/icons/tente.png';
@@ -45,6 +46,7 @@ const StyledTab = styled(Tab)`
  font-size:1.2em!important;
  letter-spacing: 2px!important;
  color:white!important;
+ font-family: 'Roboto Condensed'!important;
 `;
 
 const StyledCard = styled(Card)`
@@ -70,7 +72,10 @@ const GridContainer = styled(Grid)`
   align-items:center;
   height: 100%;
   position:relative;
-  
+  color: white;
+  background-color: #034228;
+  font-family: 'Roboto condensed';
+
   ${media.tablet`
       flex-direction:row;
   `}
@@ -86,6 +91,13 @@ const GridContainer = styled(Grid)`
 
 const InformationFriday= styled.div`
   width: 100%;
+  text-align:center;
+  min-height: 200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
 
   ${media.tablet`
     width: 50%;
@@ -96,9 +108,6 @@ const InformationFriday= styled.div`
 const InformationSaturday = styled.div`
   width: 100%;
   display:flex;
-  color: white;
-  background-color: #034228;
-  font-family: 'Roboto condensed';
 
   ${media.tablet`
     box-sizing: border-box;
@@ -117,7 +126,7 @@ const InformationSaturday = styled.div`
     `} 
   }
 
-  p {
+  div.textContainer {
     margin: 0;
     font-size: 0.8em;
 
@@ -130,14 +139,24 @@ const InformationSaturday = styled.div`
     ${media.laptop`
       padding:0.5em 15%;
       margin: 0 0 0 10%;
-      font-size: 1em;
+      font-size: 0.9em;
     `} 
   }
   
-  #title{
+  #title {
     font-size: 1.2em;
     font-weight:900;
     letter-spacing:2px;
+    font-weight: bold;
+    margin: 0.6em auto;
+  }
+
+  #title1 {
+    font-size: 1.2em;
+    font-weight:900;
+    letter-spacing:2px;
+    font-weight: bold;
+    margin: 0 auto 0.6em auto;
   }
 
   span {
@@ -148,13 +167,10 @@ const InformationSaturday = styled.div`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    background-color:#64e7a1;
-    min-width: 20%;
-
-    ${media.desktop`
-      min-width: 40%;
-    `} 
+    background-color:#64e9a2;
+    min-width: 20%; 
   }
+
 
   .icon {
     margin: auto;
@@ -162,6 +178,31 @@ const InformationSaturday = styled.div`
     height: 50px;
     padding: 0.4em;
   }
+`;
+
+const Tip= styled(Tooltip)`
+  color: black;
+  font-size: 2em;
+  `;
+
+const longText1 = `
+Vente de boissons (alcool/soft). Alcool interdit à l’entrée du festival. Bouteille d’eau autorisée (sans bouchons).
+`;
+
+const longText2 = `
+Restauration sur place (tu peux ramener ta pomme mais pas ton burger)
+`;
+
+const longText3 = `
+Coin ciné à partir de 22h.
+`;
+
+const longText4 = `
+Parking à 100m (attention à jeter vos mégots/déchets dans les poubelles) 
+`;
+
+const longText5 = `
+Camping gratuit sur place pour la nuit du samedi.
 `;
 
 class Infos extends Component {
@@ -190,9 +231,9 @@ class Infos extends Component {
               <StyledCard>
                 <GridContainer>
                   <InformationFriday>
-                    Hey
+                    <p>Plus de détails bientôt ! </p>
                   </InformationFriday>
-                  <iframe title="carte Vendredi" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2521.0913816523794!2d2.580194316078457!3d50.81094557952675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dce62c8cdf75e1%3A0x7f6d1318755275ea!2sPlace+Saint-Pierre%2C+59114+Steenvoorde!5e0!3m2!1sfr!2sfr!4v1553187285964"/>
+                  <iframe title="carte Vendredi" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2521.1750751522686!2d2.5793811159388036!3d50.809394879526565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dce62d007d3a8b%3A0xee3a27e4e6c2a7f5!2sGrand+Place+Norbert+Segard%2C+59114+Steenvoorde!5e0!3m2!1sfr!2sfr!4v1559669836826!5m2!1sfr!2sfr" frameBorder="0"></iframe>
                 </GridContainer> 
               </StyledCard>
               : 
@@ -200,23 +241,54 @@ class Infos extends Component {
                 <GridContainer>
                   <InformationSaturday>
                     <div className="text">
-                      <p><span id="title">LIEU</span><br></br> Terrain des Archers <br/>Chemin Petit d'Hazebrouck <br></br> 59114, STEENVOORDE <br></br>Parking à 100m</p>
-                      <p><span id="title">HORAIRES</span><br></br>Ouverture : <span>14h00</span> <br></br> Fermeture : <span>3h00</span></p>
-                      <p><span id="title">TARIF</span><br/>
-                          Prévente : <span>13€</span><br/>
-                          Sur place : <span>15€</span>
-                      </p>
-                      <p><span id="title">CAMPING</span> <br></br>Uniquement pour la nuit du SAMEDI au DIMANCHE</p>
+                      <div className="textContainer">
+                        <div id="title1">LIEU</div>
+                        Terrain des Archers 
+                        <br/>
+                        Chemin Petit d'Hazebrouck
+                        <br />
+                        59114, STEENVOORDE
+                        <br />
+                        Parking à 100m
+                      </div>
+                      <div className="textContainer">
+                        <div id="title">HORAIRES</div>
+                        Ouverture : 
+                        <span> 15h00</span> 
+                        <br />
+                        Fermeture :
+                        <span> 3h00</span>
+                      </div>
+                      <div className="textContainer">
+                        <div id="title">TARIF</div>                          
+                        Prévente : <span>13€</span>                            
+                        <br/>
+                        Sur place : <span>15€</span>
+                      </div>
+                      <div className="textContainer">
+                        <div id="title">CAMPING</div>
+                        Uniquement pour la nuit du SAMEDI au DIMANCHE
+                      </div>
                     </div>
                     <div id="icons">
-                      <img src={ biere } className="icon" alt="tente"/>
-                      <img src={ frite } className="icon" alt="tente"/>
-                      <img src={ cine } className="icon" alt="tente"/>
-                      <img src={ parking } className="icon" alt="tente"/>
-                      <img src={ tente } className="icon" alt="tente"/>
+                      <Tip title={longText1}>
+                        <img src={ biere } className="icon" alt="tente"/>
+                      </Tip>
+                      <Tip title={longText2}>
+                        <img src={ frite } className="icon" alt="tente"/>
+                      </Tip>
+                      <Tip title={longText3}>
+                        <img src={ cine } className="icon" alt="tente"/>
+                      </Tip>
+                      <Tip title={longText4}>
+                        <img src={ parking } className="icon" alt="tente"/>
+                      </Tip>
+                      <Tip title={longText5}>
+                        <img src={ tente } className="icon" alt="tente"/>
+                      </Tip>
                     </div>
                   </InformationSaturday>
-                  <iframe title="carte Samedi" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10083.860534326544!2d2.556718469112891!3d50.81328467952719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dce62091f889a1%3A0x7ec7de275ff362a9!2sChemin+Petit+d&#39;Hazebrouck%2C+59114+Steenvoorde!5e0!3m2!1sfr!2sfr!4v1555489927534!5m2!1sfr!2sfr"/>
+                  <iframe title="carte Samedi" frameBorder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10083.860534326544!2d2.556718469112891!3d50.81328467952719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dce62091f889a1%3A0x7ec7de275ff362a9!2sChemin+Petit+d&#39;Hazebrouck%2C+59114+Steenvoorde!5e0!3m2!1sfr!2sfr!4v1555489927534!5m2!1sfr!2sfr"/>
                 </GridContainer> 
               </StyledCard>
             }

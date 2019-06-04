@@ -3,19 +3,58 @@ import YouManLU from 'assets/line-up/YouMan.jpg';
 import BafangLU from 'assets/line-up/Bafang.jpg';
 import AMCLU from 'assets/line-up/AMC.jpg';
 import BlackwaveLU from 'assets/line-up/Blackwave.jpg';
-import CelliniLU from 'assets/line-up/Cellini.jpg';
+import CelliniLU from 'assets/line-up/Cellini.png';
 import RobbyLU from 'assets/line-up/Robby.jpg';
 import FerqliLU from 'assets/line-up/Ferqli.jpg';
-import TomaReyLU from 'assets/line-up/TomaRey.jpg';
+import TomaReyLU from 'assets/line-up/TomaRey.png';
+import BluSamuLU from 'assets/line-up/BluSamu.png';
+import LaFraicheurLU from 'assets/line-up/LaFraicheur.jpg';
 
 // IMAGE ARTIST 
-import YouManArtist from 'assets/artist/YouMan.png';
-import BafangArtist from 'assets/artist/Bafang.png';
+import YouMan from 'assets/artist/YouMan.png';
+import Bafang from 'assets/artist/Bafang.png';
 import AMC from 'assets/artist/AMC.jpg';
 import Blackwave from 'assets/artist/Blackwave.png';
 import Cellini from 'assets/artist/Cellini.png';
+import Robby from 'assets/artist/Robby.png';
+import TomaRey from 'assets/artist/TomaRey.png';
+import Ferqli from 'assets/artist/Ferqli.png';
+import BluSamu from 'assets/artist/BluSamu.png';
+import LaFraicheur from 'assets/artist/LaFraicheur.png';
 
 export default {
+  blusamu: {
+    id: 'blusamu',
+    name: 'Blu Samu',
+    style: 'Rap / Hip Hop | Samedi 20 Juillet',
+    description: {
+      first : 'Du haut de ses 23ans, Blu Samu a fait ses débuts il y a quelques années, alors âgée de 19ans. Mais cela n’empêche qu’elle exploite un registre assez large: du hip-hop à la soul, sans oublier le funk.',
+      second : 'Ses différentes compositions sont le reflet de ses pensées, lieu où la pudeur n’a pas sa place. Suite à sa rencontre avec le 77, ces derniers l’ayant pris sous leurs ailes, Blu a décidé de quitter Anvers pour s’installer à Bruxelles. Depuis, elle explore de nouveaux terrains en collaborant avec de nouvelles personnes, ce qui lui permet d’en apprendre sur ceux qui l’entourent.',
+    },
+    links: {
+      soundcloud: 'https://soundcloud.com/salamanderijn',
+      facebook: 'https://www.facebook.com/BluSamu/',
+    },
+    lineUpImg: BluSamuLU,
+    artistImg: BluSamu,
+    video: '8zknyJcEiy4',
+  },
+  lafraicheur: {
+    id: 'lafraicheur',
+    name: 'La Fraîcheur',
+    style: 'Deep House / Techno Beats| Samedi 20 Juillet',
+    description: {
+      first : 'Depuis plus de dix ans, d\'abord à Paris, puis à Montréal et maintenant à Berlin, La Fraîcheur prépare son propre mélange de House & beats Techno, se faisant un nom avec des sets techno puissants et chargés d’émotions.',
+      second : 'Elle a fait des tournées partout en Europe, en Amérique du Nord et du Sud, et Japon, notamment aux festivals Burning Man, Fusion et Garbicz ou des clubs célèbres tels que Tresor, About Blank, KitKat Club, Prince Charles Kater Holzig pour en nommer quelques-uns.',
+    },
+    links: {
+      soundcloud: 'https://soundcloud.com/la-fraicheur',
+      facebook: 'https://www.facebook.com/djlafraicheur/',
+    },
+    lineUpImg: LaFraicheurLU,
+    artistImg: LaFraicheur,
+    video: 'VKEbFYIVZAA',
+  },
   youman: {
     id: 'youman',
     name: 'Youman',
@@ -31,8 +70,41 @@ export default {
       facebook: 'https://www.facebook.com/youmanband',
     },
     lineUpImg: YouManLU,
-    artistImg: YouManArtist,
+    artistImg: YouMan,
     video: 'PD3RCwNseqQ',
+  },
+  blackwave: {
+    id: 'blackwave',
+    name: 'blackwave.',
+    style: 'Hip-Hop / Jazzy | Samedi 20 Juillet',
+    description: {
+      first: 'Blackwave (Willem Ardui et Jaywalker) forment un duo hip-pop anversois. Les messieurs de Blackwave apportent leurs merveilleux grooves des années 90 avec un groupe de musiciens de jazz du Conservatoire d\'Anvers. Leur premier EP \'Mic Check\' est sorti en mai 2017 et a été très bien reçu par la presse néerlandaise et belge.',
+      second: 'Leur single \'Elusive feat\' a maintenant plus de 3,5 millions de flux sur spotify. Leur précédent single "Whasgood ?!" a été loué par Billboard et est un single estival accrocheur, avec des influences de Prince, Outkast et Will Smith. Enfin, «Good Enough» est leur single le plus abouti à ce jour. Avec son ambiance hip-hop old school des années 90, ce titre montre son incroyable talent musical et vocal.',
+    },
+    links: {
+      site: 'https://www.blackwavedot.com',
+      soundcloud: 'https://soundcloud.com/blackwavedot',
+      facebook: 'https://www.facebook.com/blackwavedot',
+    },
+    lineUpImg: BlackwaveLU,
+    artistImg: Blackwave,
+    video: 'Z4jt9d5ammI',
+  },
+  cellini: {
+    id: 'cellini',
+    name: 'Cellini',
+    style: 'Deep / Emotional | Samedi 20 Juillet',
+    description: {
+      first: 'Cellini est un artiste belge aux profondes racines italiennes. Il manie un très large éventail de sons puissants, tantôt profond et émotionnel, tantôt puissant et extatique. Du haut de ses 20 ans, il est encore très jeune mais a pourtant une vision forte de la musique et du son.',
+      second: 'En 2017, Cellini a commencé sa collaboration avec Floorfiller. Seulement quelques mois plus tard, il a ajouté la célèbre boîte de nuit Fuse à sa liste. Avec Fuse, il a fondé un nouveau concept appelé "Cycle Quatre" sur lesquels ils inviteront quelques artistes par an. En lisant l’esprit et l’âme de son public, Cellini vous emmène dans un voyage à travers les parties les plus profondes de la techno et traduit une profondeur infinie en sons audibles. Les lignes entre physique et mental, tangible et surnaturel, l’être humain et la musique s’estompent alors qu’il est sur scène.',
+    },
+    links: {
+      soundcloud: 'https://soundcloud.com/cellinimusic/',
+      facebook: 'https://www.facebook.com/Cellinimusic/',
+    },
+    lineUpImg: CelliniLU,
+    artistImg: Cellini,
+    video: 'zqVfseH1dbA',
   },
   bafang: {
     id: 'bafang',
@@ -48,7 +120,7 @@ export default {
       facebook: 'https://www.facebook.com/BAFANGOFFICIEL/',
     },
     lineUpImg: BafangLU,
-    artistImg: BafangArtist,
+    artistImg: Bafang,
     video: '3cK2b6Z2VdI'
   },
   anglemortetclignotant: {
@@ -69,42 +141,6 @@ export default {
     artistImg: AMC,
     video: '1Vba2TGa830',
   },
-
-  blackwave: {
-    id: 'blackwave',
-    name: 'blackwave.',
-    style: 'Hip-Hop / Jazzy | Samedi 20 Juillet',
-    description: {
-      first: 'Blackwave (Willem Ardui et Jaywalker) forment un duo hip-pop anversois. Les messieurs de Blackwave apportent leurs merveilleux grooves des années 90 avec un groupe de musiciens de jazz du Conservatoire d\'Anvers. Leur premier EP \'Mic Check\' est sorti en mai 2017 et a été très bien reçu par la presse néerlandaise et belge.',
-      second: 'Leur single \'Elusive feat\' a maintenant plus de 3,5 millions de flux sur spotify. Leur précédent single "Whasgood ?!" a été loué par Billboard et est un single estival accrocheur, avec des influences de Prince, Outkast et Will Smith. Enfin, «Good Enough» est leur single le plus abouti à ce jour. Avec son ambiance hip-hop old school des années 90, ce titre montre son incroyable talent musical et vocal.',
-    },
-    links: {
-      site: 'https://www.blackwavedot.com/?fbclid=IwAR1v7OOs_tGTsxSHsINgw3IC96QiJnoeByvp4hFwd4HaD-NF3kpPpffn3b0',
-      soundcloud: 'https://soundcloud.com/blackwavedot',
-      facebook: 'https://www.facebook.com/blackwavedot/?__tn__=K-R&eid=ARDFJMrzQIh2OFDT8StBuXwDjiKhmZZsnNwN20FAuv2WHNHLm0lQSIC0OU6FIOBw67aRWxn-PNwyBZkL&fref=mentions&__xts__[0]=68.ARAMu_p911uXzAlTdHkGWn7r4Mv_tsTWdn8gfMouZ-RTeFScuWckZDinyN-FwxHtZMjL3ZUUdMM_3uljnSzSoNmm27jAzSqLwXMBbmkZDWirbwElS_tjWlWeRWyTNZelib9DLnpbJ2xIO_yY_8Rug963BPNbNh8FMJrYlHOsasBLNsNoD5DsZr818Guyn4UOrOhZIPt8d0HgDXtdLy09xONPVUOD07v71YeBeDF9Qr6m8Dp_K11H7hlsXSzXzxeAbLICUbd3LTqbw6CvRwhxW2sThJBUeyKFdFrm1feg908uPPM7xLdRjMfigl53cYdMUql0saZITcJthTzCNBTOMVo',
-    },
-    lineUpImg: BlackwaveLU,
-    artistImg: Blackwave,
-    video: 'Z4jt9d5ammI',
-  },
-
-  cellini: {
-    id: 'cellini',
-    name: 'Cellini',
-    style: 'Deep / Emotional | Samedi 20 Juillet',
-    description: {
-      first: 'Cellini est un artiste belge aux profondes racines italiennes. Il manie un très large éventail de sons puissants, tantôt profond et émotionnel, tantôt puissant et extatique. Du haut de ses 20 ans, il est encore très jeune mais a pourtant une vision forte de la musique et du son.',
-      second: 'En 2017, Cellini a commencé sa collaboration avec Floorfiller. Seulement quelques mois plus tard, il a ajouté la célèbre boîte de nuit Fuse à sa liste. Avec Fuse, il a fondé un nouveau concept appelé "Cycle Quatre" sur lesquels ils inviteront quelques artistes par an. En lisant l’esprit et l’âme de son public, Cellini vous emmène dans un voyage à travers les parties les plus profondes de la techno et traduit une profondeur infinie en sons audibles. Les lignes entre physique et mental, tangible et surnaturel, l’être humain et la musique s’estompent alors qu’il est sur scène.',
-    },
-    links: {
-      soundcloud: 'https://soundcloud.com/cellinimusic/',
-      facebook: 'https://www.facebook.com/Cellinimusic/',
-    },
-    lineUpImg: CelliniLU,
-    artistImg: Cellini,
-    video: 'zqVfseH1dbA',
-  },
-
   robby: {
     id: 'robby',
     name: 'Robby & Stupid Flash',
@@ -115,12 +151,12 @@ export default {
     },
     links: {
       soundcloud: 'https://soundcloud.com/robbyandstupidflash',
-      facebook: 'https://www.facebook.com/robbyandstupidflash/?eid=ARD-i7fSrl3876_ttIyPjfyy1X_pNAQ7Et8gBOTIhPIpIeLKLxtVLrwMoDdo-UNeDvl6sMj2bRqlO9-_',
+      facebook: 'https://www.facebook.com/robbyandstupidflash',
     },
     lineUpImg:  RobbyLU,
+    artistImg: Robby,
     video: '-wX5dOxMXEQ',
   },
-
   ferqli: {
     id: 'ferqli',
     name: 'Ferqli',
@@ -132,10 +168,11 @@ export default {
     links: {
       youtube: '',
       soundcloud: 'https://soundcloud.com/ferqli',
-      facebook: 'https://www.facebook.com/F3rqli/?__tn__=K-R&eid=ARCKSLYB7i0faLa4FDh6uwUhv4bMAqQNSzI2PY70U01dHI6veHHzfkB0diZpDgpa-x-vssNaif1yBKgu&fref=mentions&__xts__[0]=68.ARDfalpYrLxEF9ZMgumZ-uDrko1xRr7lGuSIZ4xJ-m6CBK6k8k3f9NxuL-o6EvfnIjpJEhAPe9I2M7pnhPdzse6KVLGO7jYnkhlcykKqYCxQBjnLcOY-5-5SXg9H1qT8KJcRutuVfyapYSb4fwoUcg0_0tdWxI7Iz9d6frufvdOVk9UVPt-m69jDt1InEI1I5nWgFi0EYvTwdZ-0SvtaRHSEriklFHKigmVzDvfeoE1r8wFGUS5hX7edxefwgndHTFCCXIhfKU546ixXXjx49-fInOJJ6Z_emMybkw9wHtNX0amDSE-x99cRIZWEhncvBRKryiGPOHvfiJtQvn-ahr6u',
+      facebook: 'https://www.facebook.com/F3rqli',
     },
     lineUpImg: FerqliLU,
-    video: 'v=ksHwr2eNJUc',
+    artistImg: Ferqli,
+    video: 'ksHwr2eNJUc',
   },
 
   TomaRey: {
@@ -152,9 +189,8 @@ export default {
       facebook: '',
     },
     lineUpImg: TomaReyLU,
-    video: '',
+    artistImg: TomaRey,
+    video: null,
   },
- 
- 
 };
 

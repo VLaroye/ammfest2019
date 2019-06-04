@@ -117,16 +117,16 @@ const Footer = () => {
     </div>
     
     <div className="logos">
-      <a href='https://www.facebook.com/AMM.artmassandmess/' className="link">
+      <a href='https://www.facebook.com/AMM.artmassandmess/' className="link" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon className="icon" icon={['fab', 'facebook-square']} />
       </a>
-      <a href='https://www.instagram.com/amm_fest/?fbclid=IwAR0Es5d28UtoMuLIcRJMTpVAY_ik1Aebj0EIgdotxa6Iv9vgMhLsK_dOoCU' className="link">
+      <a href='https://www.instagram.com/amm_fest/' className="link" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon className="icon" icon={['fab', 'instagram']} />
       </a>
-      <a href='https://www.youtube.com/channel/UCyc6lWpR1mbZ5YMcIJ6VCKw/featured?disable_polymer=1/' className="link">
+      <a href='https://www.youtube.com/channel/UCyc6lWpR1mbZ5YMcIJ6VCKw/featured?disable_polymer=1/' className="link" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon className="icon" icon={['fab', 'youtube']} />
       </a>
-      <a href='https://twitter.com/ArtMassMess/' className="link">
+      <a href='https://twitter.com/ArtMassMess/' className="link" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon className="icon" icon={['fab', 'twitter']} />
       </a>
     </div>

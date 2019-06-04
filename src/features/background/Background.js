@@ -1,6 +1,7 @@
 import React from 'react';
-import fond from 'assets/fond.png';
 import styled from 'styled-components';
+
+import fond from 'assets/fond.png';
 
 const Image = styled.img`
   position:absolute;
@@ -11,7 +12,7 @@ const Image = styled.img`
 `;
 const Background = () => {
   return (
-    <Image src={ fond } alt="fond"/>
+      <Image src={ fond } alt="fond"/>
     )
 };
 

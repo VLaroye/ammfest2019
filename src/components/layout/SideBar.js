@@ -65,7 +65,7 @@ const SideBar = ({ isOpen }) => {
       <Link href="/#" className="menu-item">Home</Link>
       <Link href="/#lineUp" className="menu-item">Line-up</Link>
       <Link href="/#info" className="menu-item">Informations</Link>
-      <Link href="/" className="menu-item">Réservation</Link>
+      <Link href="https://www.weezevent.com/amm-fest-5" target="_blank" rel="noopener noreferrer" className="menu-item">Réservation</Link>
       <Link href="/sponso" className="menu-item">Sponsos</Link>
     </Menu>
   )

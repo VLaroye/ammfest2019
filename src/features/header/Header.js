@@ -2,12 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import media from 'utils/media';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const Text = styled.div`
   color: white;
   position: relative;
   margin: 10em 2rem 2rem 2rem;
   font-family: 'Roboto Condensed';
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
   ${media.tablet`
     margin-left: 4em;  
@@ -84,10 +90,12 @@ const Container = styled.div`
   .logo {
     display:none;
     flex-direction: column;
+    align-items: center;
     color: white;
     position: relative;
-    margin: 8em 2rem 2rem 2rem;
+    margin: 4em 2rem 2rem 2rem;
     font-size: 2.2em;
+    
 
     ${media.tablet`
     margin-left: 4em;
@@ -107,6 +115,26 @@ const Container = styled.div`
   .icon {
     padding-bottom: 0.3em;
   }
+
+  #facebook, #instagram, #youtube, #twitter {
+    transition: 0.8s;
+  }
+
+  #facebook:hover {
+    color: #3C5A99;
+  }
+
+  #instagram:hover {
+    color: #8a3ab9;
+  }
+
+  #youtube:hover {
+    color: #FF0000;
+  }
+
+  #twitter:hover {
+    color: #38A1F3;
+  }
 `;
 
 
@@ -115,26 +143,36 @@ const Header = () => {
     <Container>
       <Text>
         <p>#AMMFEST</p>
-        <Actuality>
-          <FontAwesomeIcon className="heart" icon={['fa', 'heart']} />
-          billetterie online ! 
-        </Actuality>
+        <a href="https://www.weezevent.com/amm-fest-5" target="_blank" rel="noopener noreferrer">
+          <Actuality>
+            <FontAwesomeIcon className="heart" icon={['fa', 'heart']} />
+            billetterie online ! 
+          </Actuality>
+        </a>
         <p>19 - 20 JUILLET 2019</p>
       </Text>
       <Social>
         <div className="logo">
-          <a href='https://www.facebook.com/AMM.artmassandmess/' className="link">
-            <FontAwesomeIcon className="icon" icon={['fab', 'facebook-square']} />
-          </a>
-          <a href='https://www.instagram.com/amm_fest/?fbclid=IwAR0Es5d28UtoMuLIcRJMTpVAY_ik1Aebj0EIgdotxa6Iv9vgMhLsK_dOoCU' className="link">
-            <FontAwesomeIcon className="icon" icon={['fab', 'instagram']} />
-          </a>
-          <a href='https://www.youtube.com/channel/UCyc6lWpR1mbZ5YMcIJ6VCKw/featured?disable_polymer=1/' className="link">
-            <FontAwesomeIcon className="icon" icon={['fab', 'youtube']} />
-          </a>
-          <a href='https://twitter.com/ArtMassMess/' className="link">
-            <FontAwesomeIcon className="icon" icon={['fab', 'twitter']} />
-          </a>
+          <ScrollAnimation animateIn='bounceInRight' animateOnce offset={0} delay={400}>
+            <a href='https://www.facebook.com/AMM.artmassandmess/' target="_blank" rel="noopener noreferrer" className="link">
+              <FontAwesomeIcon className="icon" id="facebook" icon={['fab', 'facebook-square']} />
+            </a>
+          </ScrollAnimation>   
+          <ScrollAnimation animateIn='bounceInRight' animateOnce offset={0} delay={600}>
+            <a href='https://www.instagram.com/amm_fest/' target="_blank" rel="noopener noreferrer" className="link">
+              <FontAwesomeIcon className="icon" id="instagram" icon={['fab', 'instagram']} />
+            </a>
+          </ScrollAnimation>   
+          <ScrollAnimation animateIn='bounceInRight' animateOnce offset={0} delay={800}>
+            <a href='https://www.youtube.com/channel/UCyc6lWpR1mbZ5YMcIJ6VCKw/featured?disable_polymer=1/' target="_blank" rel="noopener noreferrer" className="link">
+              <FontAwesomeIcon className="icon" id="youtube" icon={['fab', 'youtube']} />
+            </a>
+          </ScrollAnimation>   
+          <ScrollAnimation animateIn='bounceInRight' animateOnce offset={0} delay={1000}>
+            <a href='https://twitter.com/ArtMassMess/' target="_blank" rel="noopener noreferrer" className="link">
+              <FontAwesomeIcon className="icon" id="twitter" icon={['fab', 'twitter']} />
+            </a>
+          </ScrollAnimation>   
         </div>
       </Social>
     </Container>

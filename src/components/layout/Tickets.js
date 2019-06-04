@@ -12,7 +12,7 @@ const Container = styled.div`
   color:white;
   font-size: 1em;
   font-weight: bold;
-  padding: 1em;
+  padding: 2em;
   border-radius: 0 0 0 15px;
   cursor: pointer;
 
@@ -33,11 +33,11 @@ const Container = styled.div`
 
 const Tickets = () => {
   return (
-    <Container>
-      <a href="/">
+    <a href="https://www.weezevent.com/amm-fest-5" target="_blank" rel="noopener noreferrer">
+      <Container>
         Tickets
-      </a>
-    </Container>
+      </Container>
+    </a>
   )
 }
 

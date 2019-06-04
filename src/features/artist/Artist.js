@@ -23,7 +23,6 @@ const Container = styled.div`
   .videoContainer {
     position: relative;
     padding-bottom: 56.25% /* 16:9 */;
-    padding-top: 25;
   }
 
   .video {
@@ -52,6 +51,7 @@ const ArtistImg = styled.img`
 const TextContainer = styled.div`
   position: relative;
   display: grid;
+  padding-bottom: 4em;
   grid-template-columns: 100%;
   grid-template-rows: auto auto auto auto auto;
 
@@ -156,12 +156,14 @@ const ArtistStyle = styled.div `
 const SocialIcons = styled.div`
   margin: 1em 0;
   font-size: 3em;
-  text-align: right;
+  text-align: center;
+  z-index: 1;
 
   grid-area: social;
 
   .link {
     padding: 0 0.2em;
+    z-index: 2;
   }
 
   ${media.tablet`
@@ -170,6 +172,7 @@ const SocialIcons = styled.div`
   `}
 
   ${media.xl`
+    text-align: right;
     margin: 0;
     font-size: 2.5em;
   `}
@@ -226,16 +229,16 @@ const Artist = ({ match }) => {
           <ArtistName>{ artist.name }</ArtistName>
           <ArtistStyle>{ artist.style }</ArtistStyle>        
           <SocialIcons>
-            {artist.links.site ? <a href={ artist.links.site } className="link">
+            {artist.links.site ? <a href={ artist.links.site } className="link" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fa', 'globe-americas']} />
             </a> : null}
-            {artist.links.soundcloud ? <a href={ artist.links.soundcloud } className="link">
+            {artist.links.soundcloud ? <a href={ artist.links.soundcloud } className="link" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fab', 'soundcloud']} color="#FE5000"/>
             </a> : null}
-            {artist.links.facebook ? <a href={ artist.links.facebook } className="link">
+            {artist.links.facebook ? <a href={ artist.links.facebook } className="link" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fab', 'facebook-square']} color="#3C5A99"/>
             </a> : null}
-            {artist.links.youtube ? <a href={ artist.links.youtube } className="link">
+            {artist.links.youtube ? <a href={ artist.links.youtube } className="link" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fab', 'youtube']} color="#FF0000"/>
             </a> : null}
           </SocialIcons>
@@ -252,11 +255,14 @@ const Artist = ({ match }) => {
             </Link>
           </div>
         </TextContainer>
-        <YouTube 
-          videoId={artist.video}
-          className="video"
-          containerClassName="videoContainer"
-        />
+        {
+          artist.video ?
+          <YouTube 
+            videoId={artist.video}
+            className="video"
+            containerClassName="videoContainer"
+          /> : null
+        }
       </Container>
       <Footer />
     </Fragment>
