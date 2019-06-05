@@ -91,18 +91,77 @@ const GridContainer = styled(Grid)`
 
 const InformationFriday= styled.div`
   width: 100%;
-  text-align:center;
-  min-height: 200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5em;
+  display:flex;
 
   ${media.tablet`
+    box-sizing: border-box;
+    height: 100%;
+    position:absolute;
+    left: 50%;
     width: 50%;
   `} 
 
+  .text {
+    margin:auto 15%;
+    width: 90%;
+
+    ${media.tablet`
+      margin: auto;
+    `} 
+  }
+
+  div.textContainer {
+    margin: 0;
+    font-size: 0.8em;
+
+    ${media.tablet`
+      padding: 0.5em;
+      margin: 0 0 0 10%;
+      font-size: 0.9em;
+    `} 
+
+    ${media.laptop`
+      padding:0.5em 15%;
+      margin: 0 0 0 10%;
+      font-size: 0.9em;
+    `} 
+  }
+  
+  #title {
+    font-size: 1.2em;
+    font-weight:900;
+    letter-spacing:2px;
+    font-weight: bold;
+    margin: 0.6em auto;
+  }
+
+  #title1 {
+    font-size: 1.2em;
+    font-weight:900;
+    letter-spacing:2px;
+    font-weight: bold;
+    margin: 0 auto 0.6em auto;
+  }
+
+  span {
+    font-weight: bold;
+  }
+
+  #icons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color:#64e9a2;
+    min-width: 20%; 
+  }
+
+
+  .icon {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding: 0.4em;
+  }
 `;
 
 const InformationSaturday = styled.div`
@@ -231,7 +290,26 @@ class Infos extends Component {
               <StyledCard>
                 <GridContainer>
                   <InformationFriday>
-                    <p>Plus de détails bientôt ! </p>
+                    <div className="text">
+                      <div className="textContainer">
+                          <div id="title">HORAIRES</div>
+                          Début : 
+                          <span> 22h00</span> 
+                          <br />
+                          Fin :
+                          <span> 23h30 environ</span>
+                      </div>
+                      <div className="textContainer">
+                          <div id="title">PROGRAMME</div>
+                          Lacie La Boussole te propose un spectacle son & lumière "Le Cinquième Élément"
+                          que tu ne risques pas d 'oublier !<br/>
+                          Un rendez - vous gratuit pour petits & grands qui aura lieu Grand Place Norbert Segard à Steenvoorde.
+                      </div>
+                      <div className="textContainer">
+                          <div id="title">PRIX</div>
+                          Gratuit !
+                      </div>
+                    </div>
                   </InformationFriday>
                   <iframe title="carte Vendredi" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2521.1750751522686!2d2.5793811159388036!3d50.809394879526565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dce62d007d3a8b%3A0xee3a27e4e6c2a7f5!2sGrand+Place+Norbert+Segard%2C+59114+Steenvoorde!5e0!3m2!1sfr!2sfr!4v1559669836826!5m2!1sfr!2sfr" frameBorder="0"></iframe>
                 </GridContainer> 
