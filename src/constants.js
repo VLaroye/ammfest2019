@@ -9,6 +9,7 @@ import FerqliLU from 'assets/line-up/Ferqli.jpg';
 import TomaReyLU from 'assets/line-up/TomaRey.png';
 import BluSamuLU from 'assets/line-up/BluSamu.png';
 import LaFraicheurLU from 'assets/line-up/LaFraicheur.jpg';
+import BoussoleLU from 'assets/line-up/boussole.jpg';
 
 // IMAGE ARTIST 
 import YouMan from 'assets/artist/YouMan.png';
@@ -21,6 +22,7 @@ import TomaRey from 'assets/artist/TomaRey.png';
 import Ferqli from 'assets/artist/Ferqli.png';
 import BluSamu from 'assets/artist/BluSamu.png';
 import LaFraicheur from 'assets/artist/LaFraicheur.png';
+import Boussole from 'assets/artist/boussole.jpg';
 
 export default {
   blusamu: {
@@ -190,6 +192,23 @@ export default {
     },
     lineUpImg: TomaReyLU,
     artistImg: TomaRey,
+    video: null,
+  },
+  boussole: {
+    id: 'la-boussole',
+    name: 'Cie La Boussole',
+    style: 'Spectacle | Vendredi 19 Juillet',
+    description: {
+      first: "Spectacle Vivant Architectural Pyromélodique en Son & Lumière. Quatre échassiers lumineux, une comédienne, mise en lumière d'un bâtiment ou d'un espace, sonorisation, feu d'artifices, effets spéciaux..",
+      second: "Spectacle écologique, prise de conscience de l'impact de l'Homme sur la planète au travers d'une rencontre avec les quatre éléments : l'Eau, l'Air, la Terre et le Feu. Le cinquième étant bien entendu... l'Homme... qui en essayant de maîtriser les éléments a rompu l'équilibre naturel de la vie mettant ainsi en péril sa survie... Mais il existe des solutions et sous une pluie d'étoiles, l'Homme verra son avenir renaître.",
+      third: ''
+    },
+    links: {
+      site: 'https://www.conceptspectacle.com/spectacles-cinquieme-element.php',
+      facebook: 'https://www.facebook.com/Laboussoleconceptsetspectacles/',
+    },
+    lineUpImg: BoussoleLU,
+    artistImg: Boussole,
     video: null,
   },
 };

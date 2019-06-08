@@ -296,14 +296,14 @@ class Infos extends Component {
                           Début : 
                           <span> 22h00</span> 
                           <br />
-                          Fin :
-                          <span> 23h30 environ</span>
+                          Durée :
+                          <span> 55min</span>
                       </div>
                       <div className="textContainer">
                           <div id="title">PROGRAMME</div>
                           Lacie La Boussole te propose un spectacle son & lumière "Le Cinquième Élément"
                           que tu ne risques pas d 'oublier !<br/>
-                          Un rendez - vous gratuit pour petits & grands qui aura lieu Grand Place Norbert Segard à Steenvoorde.
+                          Un rendez - vous pour petits & grands qui aura lieu Grand Place Norbert Segard à Steenvoorde.
                       </div>
                       <div className="textContainer">
                           <div id="title">PRIX</div>
